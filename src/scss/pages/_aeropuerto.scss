@@ -1,0 +1,180 @@
+//airport-main
+.airport-main {
+	background-color: $color-gray-bg;
+}
+
+.main-content-category {
+	margin: 1rem 1rem 0 1rem;
+
+	.main-category {
+		background-color: $color-primary;
+		padding: 0.3rem 0.5rem;
+		font-size: 0.9rem;
+		width: 100%;
+		text-align: center;
+	}
+
+	.portada-cat,
+	.pais-cat {
+		border-right: 1px solid $color-gray-lines;
+	}
+
+	//Clase agregada para seleccionar category de main
+	.category-selected {
+		border-bottom: 2px solid $color-secondary;
+		background-color: darken($color: $color-primary, $amount: 2);
+	}
+}
+
+.main-header {
+	border-radius: 5px;
+	margin: 0 1rem 1rem 1rem;
+	padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+	background-color: $color-primary;
+
+	.main-section {
+		height: 8rem;
+	}
+	
+	.main-section-img {
+		display: none;
+		padding: 0.5rem;
+		
+		img {
+			border: 2px solid $color-gray-lines;
+			width: 7rem;
+			height: 7rem;
+			border-radius: 50%;
+			box-sizing: border-box;
+			filter: drop-shadow(2px 4px 20px rgba(101, 101, 101, 0.15));
+		}
+	}
+
+	.main-section-country {
+		display: none;
+		text-align: center;
+		
+		.city-airport {
+			font-size: 0.7rem;
+			font-weight: 300;
+		}
+		
+		.country-airport {
+			font-size: 0.9rem;
+			font-weight: 300;
+		}
+		
+		.country-flag {
+			padding-top: 0.5rem;
+			width: 5rem;
+		}
+	}
+	
+	.main-section-climate {
+		display: none;
+		.hour {
+			font-size: 1.7rem;
+			text-align: center;
+			font-stretch: expanded;
+		}
+	}
+	
+	//clase agregada para visibilidad de secciones main
+	.section-visible {
+		display: flex;
+	}
+	
+	.airport-name {
+		grid-column-start: 1;
+		grid-column-end: span 4;
+		justify-self: center;
+		text-align: center;
+		font-size: 1rem;
+		padding: 0.5rem 0.5rem;
+		text-transform: uppercase;
+		font-weight: 700;
+		border-radius: 5px;
+		width: 100%;
+	}
+
+	.arrow-back {
+		top: 10px;
+		right: 10px;
+		width: 18px;
+		height: 18px;
+		background-color: $color-secondary;
+		border-radius: 5px;
+		color: $color-primary;
+	}
+}
+
+//info
+.info {
+	font-size: 0.9rem;
+	margin: 1rem;
+	padding: 0.5rem;
+	background-color: $color-gray-lines;
+}
+
+//aiport-sections
+.airport-sections {
+	font-size: 0.95rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+
+	position: fixed;
+	bottom: 0;
+	background: rgba(255, 255, 255, 0.35);
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	backdrop-filter: blur(7px);
+	-webkit-backdrop-filter: blur(7px);
+	border: 1px solid rgba(255, 255, 255, 0.18);
+
+	.arrow-section-container {
+		padding: 0.5rem 0;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		margin: auto;
+		opacity: 0.5;
+		background: linear-gradient(270deg, #00000085, #fff0);
+		
+		.arrow-rotate {
+			transform: rotate(180deg);
+		}
+	}
+	
+	.airport-section-content {
+		display: grid;
+		padding: 0 1rem;
+		grid-template-columns: repeat(8, 1fr);
+		grid-column-gap: 2rem;
+		overflow-x: scroll;
+
+		.airport-section {
+			display: flex;
+			width: 3rem;
+			height: 3rem;
+
+			.circle-sections {
+				width: 3.5rem;
+				height: 3.5rem;
+				border-radius: 50%;
+			}
+	
+			p {
+				font-size: 0.8rem;
+			}
+		}
+	}
+
+}
+
+//ESTILO MOMENTANEO HASTA POSICIONAR LA INFO
+.airport-main {
+	overflow-x: hidden;
+}
+
+@include rwd(576) {
+	
+};

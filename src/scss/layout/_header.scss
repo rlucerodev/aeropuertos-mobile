@@ -1,0 +1,295 @@
+.navbar {
+  width: 100%;
+  z-index: 1;
+  background-color: white;
+  padding: 1rem 0;
+  border-bottom: 1px solid #e5ebf0;
+  position: sticky;
+  top: 0;
+  //Menu-btn
+  .menu-btn {
+    margin-right: 1rem;
+  }
+  
+  .menu-btn .btn-line {
+    width: 22px;
+    height: 2.8px;
+    margin: 0 0 2px 0;
+    background: #262626;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+  }
+  
+  .btn-line:nth-child(3) {
+    margin: 0;
+  }
+  
+  /* Adding transform to the X */
+  .menu-btn.close {
+    transform: rotate(180deg);
+  }
+  
+  /* Styling the three lines
+  to make it an X */
+  .menu-btn.close .btn-line:nth-child(1) {
+    transform: rotate(45deg) translate(2px, 5px);
+  }
+  
+  .menu-btn.close .btn-line:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-btn.close .btn-line:nth-child(3) {
+    transform: rotate(-45deg) translate(2px, -5px);
+  }
+  
+  
+  /* Adding a transition delay to the
+  3 items in the navigation menu */
+  .nav-item:nth-child(1) {
+    transition-delay: 0.1s;
+  }
+  
+  .nav-item:nth-child(2) {
+    transition-delay: 0.2s;
+  }
+  
+  .nav-item:nth-child(3) {
+    transition-delay: 0.3s;
+  }
+  
+  //LOGO
+  .w-logo {
+    width: 2rem;
+  }
+
+  //MAPA SVG element
+  .map-svg {
+    margin-left: 1rem;
+  }
+}
+
+//MENU-MODAL
+.menu-modal {
+  position: absolute;
+  overflow-y: scroll;
+  top: 70px;
+  // background-color:#6699fff7;
+  background-color: white;
+  border-radius: 10px;
+  font-size: 13px;
+  box-shadow: 0px 3px 15px rgb(0 0 0 / 20%);
+  transition: left 200ms ease-in-out;
+  left: -1000px;
+  width: 90.5%;
+  height: 29rem;
+  z-index: 1;
+  text-align: center;
+
+  .airports-continent {
+    font-size: 12px;
+    & > a {
+      display:block;
+      padding-top: .5rem;
+    }
+  }
+
+  &.show {
+    visibility: visible;
+  }
+}
+
+.close ~ .menu-modal{
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 1;
+  padding: 0;
+}
+
+.menu-modal::-webkit-scrollbar {
+  display: none;
+}
+
+.buscador-vuelo__title {
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: 10px 10px 0 0;
+}
+
+.buscador-vuelo__selector {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  width: 100%;
+}
+
+.buscador__selector-title {
+  margin: 0;
+}
+
+.buscador__selector__dropdown {
+  display: flex;
+  align-items: center;
+  /* flex-basis: 600px; */
+  flex-grow: 2;
+  cursor: pointer;
+  position: relative;
+}
+
+.buscador__selector__nombre {
+  color: gray;
+  padding-right: .5rem;
+}
+
+.buscador__selector__icon {
+  color: rgb(66, 66, 66);
+}
+
+.buscador__selector__icon > i {
+  pointer-events: none;
+}
+
+.buscador__selector__items {
+  background-color: white;
+  box-shadow: 2px 2px 2px 2px #888888;
+  position: absolute;
+  bottom: -100px;
+  font-size: .9rem;
+  display: none;
+}
+
+.buscador__selector__items-show {
+  display: block;
+}
+
+.buscador__selector__item {
+  padding: .5rem;
+}
+
+.buscador__selector__item:hover {
+  background-color: rgb(105, 105, 105);
+  color: white;
+}
+
+.buscador-vuelo__form {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem 1rem 1rem;
+}
+
+.buscador-vuelo__form__container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.buscador-vuelo__input {
+  background-color: #EDEDED;
+  border-radius: .5rem;
+  outline: none;
+  height: 35px;
+  width: 150px;
+  border: 0;
+  margin: .5rem 0;
+  padding: .5rem;
+}
+
+.buscador-vuelo__input:focus {
+  outline: 1px solid #0077CC;
+}
+
+.section-autocomplete {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  border-radius: 5px;
+  top: 60px;
+  right: 0;
+  left: 0;
+  background-color: white;
+  border: 1px solid rgb(207, 207, 207);
+}
+
+.buscador-vuelo__input, .autocomplete-item {
+  width: 150px;
+}
+
+.autocomplete-item {
+  margin-left: 0;
+  padding: .3rem .5rem;
+}
+
+.autocomplete-item:hover {
+  background: rgb(2,0,36);
+  background: linear-gradient(270deg, rgba(2,0,36,1) 0%, rgba(255,255,255,0.511215490797546) 0%, rgb(192, 191, 191) 100%);
+}
+
+.autocompletar-active {
+  display: flex;
+}
+
+.buscador__selector__iconactualizar {
+  cursor: pointer;
+  margin: 0 0 0 auto;
+}
+
+.buscador-vuelo__arrow__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .25rem;
+  padding: 0 .5rem;
+}
+
+.buscador-vuelo__form__codigoVuelo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.buscador-vuelo__input-codigoVuelo {
+  width: 100%;
+}
+
+.buscador-vuelo__submit {
+  display: block;
+  border-radius: 10px;
+  background-color: #69bafc;
+  color: white;
+  border: 0;
+  width: 100%;
+  padding: .6rem;
+  font-size: .9rem;
+}
+
+.menu-modal-aeropuertos {
+  h5 {
+    text-align: left;
+    font-weight: normal;
+    margin: 0 1rem;
+    font-size: .75rem;
+  }
+}
+
+.continent {
+	background-color: #e5ebf0;
+	padding: .7rem 0;
+	text-align: center;
+	border-bottom: rgb(189, 189, 189) 1px solid;
+}
+
+.airports-continent {
+	background-color: white;
+	padding: .5rem 0;
+	ul {
+		& > li {
+			padding: .5rem;
+			&:nth-child(odd) {
+				background-color: rgb(244, 244, 244);
+			}
+		}
+	}
+}
+

@@ -1,0 +1,1595 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title></title>
+		<link rel="stylesheet" href="build/css/app.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<!-- Menu mobile -->
+		<header class="navbar flex justify-between items-center relative">
+			<div class="menu-btn block">
+				<div class="btn-line"></div>
+				<div class="btn-line"></div>
+				<div class="btn-line"></div>
+			</div>
+			<img class="w-logo" src="build/img/logo-avion.webp" alt="logo-avion" />
+			<svg
+				class="map-svg"
+				xmlns="http://www.w3.org/2000/svg"
+				width="24"
+				height="24"
+				viewBox="0 0 24 24"
+				style="fill: rgba(38, 38, 38, 1); transform: ; msfilter: "
+			>
+				<path
+					d="M12 2C7.589 2 4 5.589 4 9.995 3.971 16.44 11.696 21.784 12 22c0 0 8.029-5.56 8-12 0-4.411-3.589-8-8-8zm0 12c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"
+				></path>
+			</svg>
+			<!-- Menu modal Open -->
+			<div class="menu-modal absolute w-full">
+				<ul>
+					<li>Europa</li>
+					<li>Norteamerica</li>
+					<li>Centroamerica</li>
+					<li>Sudamerica</li>
+				</ul>
+			</div>
+		</header>
+		<div class="section-main">
+			<main class="airport-main">
+				<div class="main-content-category flex">
+					<div class="main-category portada-cat category-selected">Portada</div>
+					<div class="main-category pais-cat">País</div>
+					<div class="main-category hora-cat">Hora</div>
+				</div>
+				<div class="main-header relative">
+					<div
+						class="
+							main-section main-section-img
+							flex
+							justify-center
+							items-center
+							w-full
+							section-visible
+						"
+					>
+						<img src="build/img/aeropuerto-madrid-barajas.webp" alt="" />
+					</div>
+					<div
+						class="
+							main-section main-section-country
+							flex flex-col
+							justify-center
+							items-center
+						"
+					>
+						<a class="city-airport" href="">Madrid</a>
+						<a class="country-airport" href="">España</a>
+						<img
+							class="country-flag"
+							src="https://flagcdn.com/es.svg"
+							width="30"
+							alt="España"
+						/>
+					</div>
+					<div class="main-section main-section-climate flex-col justify-center items-center">
+						<div class="">
+							<p>Hora local España</p>
+						</div>
+						<div class="climate flex items-center justify-center">
+							<img src="build/img/partly_cloudy.webp" alt="" />
+							<p class="temperature">19 °C</p>
+						</div>
+						<div class="hour">
+							<span id="hours" class="hours"></span>:
+							<span id="minutes" class="minutes"></span>:
+							<span id="seconds" class="seconds"></span>
+						</div>
+					</div>
+					<h1 class="airport-name m-0">Aeropuerto de Madrid-Barajas</h1>
+					<svg
+						class="arrow-back absolute"
+						xmlns="http://www.w3.org/2000/svg"
+						width="24"
+						height="24"
+						viewBox="0 0 24 24"
+						style="fill: #ffffff; transform: ; msfilter: "
+					>
+						<path
+							d="M21 11H6.414l5.293-5.293-1.414-1.414L2.586 12l7.707 7.707 1.414-1.414L6.414 13H21z"
+						/>
+					</svg>
+				</div>
+				<div class="info">
+					<div id="toc-content" class="">
+						<p class="toc-title">Contenido</p>
+						<ul class="toc_list">
+							<li>
+								<a href="#Informacion_de_contacto"
+									><span class="toc_number">1</span>
+									Información de contacto
+								</a>
+							</li>
+							<li>
+								<a href="#Informacion_de_vuelos"
+									><span class="toc_number">2</span> Información de vuelos</a
+								>
+							</li>
+							<li>
+								<a href="#Vuelos_Madrid"><span class="toc_number">3</span> Vuelos Madrid</a>
+							</li>
+							<li>
+								<a href="#Como_llegar_8211_Transporte"
+									><span class="toc_number toc_depth_1">4</span> Cómo llegar –
+									Transporte</a
+								>
+							</li>
+							<li>
+								<a href="#Custodia_de_equipajes"
+									><span class="toc_number">5</span> Custodia de equipajes</a
+								>
+							</li>
+							<li>
+								<a href="#Instalaciones_del_aeropuerto_de_Madrid"
+									><span class="toc_number">6</span> Instalaciones del aeropuerto de
+									Madrid</a
+								>
+							</li>
+							<li>
+								<a href="#Banco"><span class="toc_number">7</span> Banco</a>
+							</li>
+							<li>
+								<a href="#Casas_de_cambio"
+									><span class="toc_number">8</span> Casas de cambio</a
+								>
+							</li>
+							<li>
+								<a href="#Carta_SIM_en_el_aeropuerto_MADRID_8211_tarjeta_SIM"
+									><span class="toc_number">9</span> Carta SIM en el aeropuerto MADRID –
+									tarjeta SIM</a
+								>
+							</li>
+							<li>
+								<a href="#Aeropuertos_cercanos_a_Madrid-Barajas_MAD"
+									><span class="toc_number">10</span> Aeropuertos cercanos a Madrid-Barajas
+									(MAD)</a
+								>
+							</li>
+							<li>
+								<a href="#Aerolineas_y_destinos"
+									><span class="toc_number">11</span> Aerolíneas y destinos</a
+								>
+							</li>
+						</ul>
+					</div>
+					<!-- <div class="blog_single_text_holder">
+                    <div class="text">
+                        <p>Obtén información sobre el <strong>Aeropuerto de Madrid Barajas Adolfo Suárez</strong>,
+                            tanto <a
+                                href="https://www.aeropuertos.net/aeropuerto-de-madrid-barajas-llegadas-de-vuelos/">llegadas</a>,
+                            <a
+                                href="https://www.aeropuertos.net/aeropuerto-de-madrid-barajas-salidas-de-vuelos/">‎salidas</a>,
+                            <a href="https://www.aeropuertos.net/aeropuerto-de-madrid-barajas-aerolineas/">líneas
+                                aéreas</a>, <a
+                                href="https://www.aeropuertos.net/aeropuerto-de-madrid-barajas-aparcamiento/">parking
+                                del
+                                aeropuerto</a>, como llegar (transportes), <a
+                                href="https://www.aeropuertos.net/aeropuerto-de-madrid-barajas-alquiler-de-coches/">alquiler
+                                de
+                                coches</a> y las terminales <strong>T1-T2-T3-T4-T4S</strong>.
+                        </p>
+                        <p>El <strong>Aeropuerto Madrid</strong> (código IATA: <strong>MAD</strong>, código OACI:
+                            <strong>LEMD</strong>)
+                            está situado en el distrito de Barajas, a 12 kilómetros del noreste de la ciudad de <a
+                                href="https://sitiosturisticos.com/madrid/" target="_blank"
+                                rel="noopener">Madrid</a>, y es el primer
+                            aeropuerto español de tráfico de personas, carga aérea y de operaciones comerciales.
+                        </p>
+                        <blockquote>
+                            <p>Desde 2014 el nombre oficial del aeropuerto es <strong>Adolfo Suárez
+                                    Madrid-Barajas</strong>.</p>
+                        </blockquote>
+                        <p>Este ocupa el puesto número 4 de los <a title="Aeropuertos de Europa"
+                                href="https://www.aeropuertos.net/europa/">aeropuertos de Europa</a> y número 29 de
+                            los <a href="https://www.aeropuertos.net/aeropuertos/">aeropuertos del mundo</a> en
+                            cuanto al número de vuelos
+                            operados. Al año transitan más de 29 millones y medio de personas a través de sus
+                            instalaciones. El
+                            aeropuerto de Madrid- Barajas administrado por el grupo <em>Aena</em> cuenta con 4
+                            terminales importantes.
+                        </p>
+                        <div id="toc_container" class="toc_transparent no_bullets">
+                            <p class="toc_title">Contenido</p>
+                            <ul class="toc_list">
+                                <li><a href="#Informacion_de_contacto"><span class="toc_number toc_depth_1">1</span>
+        
+        
+                                        Información de contacto
+        
+                                    </a></li>
+                                <li><a href="#Informacion_de_vuelos"><span class="toc_number toc_depth_1">2</span>
+                                        Información de
+                                        vuelos</a></li>
+                                <li><a href="#Vuelos_Madrid"><span class="toc_number toc_depth_1">3</span> Vuelos
+                                        Madrid</a></li>
+                                <li><a href="#Como_llegar_8211_Transporte"><span
+                                            class="toc_number toc_depth_1">4</span> Cómo llegar
+                                        &#8211; Transporte</a></li>
+                                <li><a href="#Custodia_de_equipajes"><span class="toc_number toc_depth_1">5</span>
+                                        Custodia de
+                                        equipajes</a></li>
+                                <li><a href="#Instalaciones_del_aeropuerto_de_Madrid"><span
+                                            class="toc_number toc_depth_1">6</span>
+                                        Instalaciones del aeropuerto de Madrid</a></li>
+                                <li><a href="#Banco"><span class="toc_number toc_depth_1">7</span> Banco</a></li>
+                                <li><a href="#Casas_de_cambio"><span class="toc_number toc_depth_1">8</span> Casas
+                                        de cambio</a></li>
+                                <li><a href="#Carta_SIM_en_el_aeropuerto_MADRID_8211_tarjeta_SIM"><span
+                                            class="toc_number toc_depth_1">9</span> Carta SIM en el aeropuerto
+                                        MADRID &#8211; tarjeta
+                                        SIM</a></li>
+                                <li><a href="#Aeropuertos_cercanos_a_Madrid-Barajas_MAD"><span
+                                            class="toc_number toc_depth_1">10</span>
+                                        Aeropuertos cercanos a Madrid-Barajas (MAD)</a></li>
+                                <li><a href="#Aerolineas_y_destinos"><span class="toc_number toc_depth_1">11</span>
+                                        Aerolíneas y
+                                        destinos</a></li>
+                            </ul>
+                        </div>
+        
+                        <div id="attachment_36882" style="width: 310px" class="wp-caption alignright"><a
+                                href="https://www.aeropuertos.net/wp-content/uploads/2009/03/Aeropuerto-Adolfo-Suarez-Madrid-Barajas.jpg"><img
+                                    loading="lazy" class="size-medium wp-image-36882"
+                                    src="https://www.aeropuertos.net/wp-content/uploads/2009/03/Aeropuerto-Adolfo-Suarez-Madrid-Barajas-300x200.jpg"
+                                    alt="Aeropuerto de Madrid" width="300" height="200"
+                                    data-headline="Aeropuerto Adolfo Suárez Madrid-Barajas Exterior"></a>
+                            <p class="wp-caption-text">Aeropuerto Adolfo Suárez Madrid-Barajas Exterior</p>
+                        </div>
+                        <div itemscope="" itemtype="http://schema.org/Airport">
+                            <h2 class="icon"><span id="Informacion_de_contacto">
+                                    <span id="Informacion_de_contacto">
+                                        <div class="icono avion"></div>
+                                        <div class="text_w_icon">Información de contacto</div>
+                                    </span>
+                                </span></h2>
+                            <meta itemprop="name" content="Aeropuerto de Madrid-Barajas" />
+                            <meta itemprop="alternateName" content="Aeropuerto Adolfo Suárez Madrid-Barajas" />
+                            <strong>Código IATA:</strong> <span itemprop="iataCode">MAD</span><br />
+                            <strong>Código OACI:</strong> <span itemprop="icaoCode">LEMD</span><br />
+                            <p>
+                                <strong>Dirección:</strong> <span itemprop="address">Av de la Hispanidad, s/n, 28042
+                                    Madrid,
+                                    España</span><br />
+                                <strong>Teléfono:</strong> <span itemprop="telephone">(+34) 913 21 10
+                                    00</span><br />
+                                <strong>Página web:</strong> <a itemprop="sameAs"
+                                    href="http://www.aena.es/es/aeropuerto-madrid-barajas/index.html"
+                                    target="_blank" rel="nofollow">www.aena.es</a>
+                            </p>
+                            <div>
+                                <h2 class="icon"><span id="Informacion_de_vuelos">
+                                        <div class="icono avion"></div>
+                                        <div class="text_w_icon">Información de vuelos</div>
+                                    </span></h2>
+                                <div class="icon">
+                                    <div class="icono salidas"></div><a
+                                        href="https://www.aeropuertos.net/aeropuerto-de-madrid-barajas-salidas-de-vuelos/">Salidas
+                                        &#8211; Aeropuerto Barajas</a>
+                                </div>
+                                <div class="icon">
+                                    <div class="icono llegadas"></div><a
+                                        href="https://www.aeropuertos.net/aeropuerto-de-madrid-barajas-llegadas-de-vuelos/">Llegadas
+                                        &#8211; Aeropuerto Barajas</a>
+                                </div>
+                                <h2 class="icon"><span id="Vuelos_Madrid">
+                                        <div class="icono avion"></div>
+                                        <div class="text_w_icon">Vuelos Madrid</div>
+                                    </span></h2>
+                                <i class="i-margin icon-check"></i><a
+                                    href="https://www.aeropuertos.net/vuelos-de-madrid-a-paris-gaulle/">Vuelos
+                                    Madrid-París</a><br />
+                                <i class="i-margin icon-check"></i><a
+                                    href="https://www.aeropuertos.net/vuelos-madrid-lisboa/">Vuelos
+                                    Madrid-Lisboa</a><br />
+                                <i class="i-margin icon-check"></i><a
+                                    href="https://www.aeropuertos.net/vuelos-madrid-mexico/">Vuelos
+                                    Madrid-México</a><br />
+                                <i class="i-margin icon-check"></i><a
+                                    href="https://www.aeropuertos.net/vuelos-madrid-bilbao/">Vuelos
+                                    Madrid-Bilbao</a><br />
+                                <i class="i-margin icon-check"></i><a
+                                    href="https://www.aeropuertos.net/vuelos-madrid-barcelona/">Vuelos
+                                    Madrid-Barcelona</a></p>
+                                <h2><span id="Como_llegar_8211_Transporte"><i class="i-margin icon-bus"></i>Cómo
+                                        llegar &#8211;
+                                        Transporte</span></h2>
+                                <p>Para llegar y salir del aeropuerto de Madrid puede tomar el servicios de los
+                                    siguientes
+                                    transportes:<br />
+                                <div class="tabs ">
+                                    <ul class="tabs-nav">
+                                        <li><a href="#tab1">Taxi</a></li>
+                                        <li><a href="#tab2">Autobús</a></li>
+                                        <li><a href="#tab3">Metro</a></li>
+                                        <li><a href="#tab4">Tren</a></li>
+                                        <li><a href="#tab5">Alquiler de coches</a></li>
+                                    </ul>
+                                    <div class="tabs-container">
+                                        <div id="tab1" class="tab-content">
+                                            Los taxis del <strong>Aeropuerto Madrid</strong> están disponibles en
+                                            las paradas de taxi en
+                                            el exterior de las áreas de llegadas correctamente señalizadas. Los
+                                            taxis oficiales del
+                                            aeropuerto se caracterizan por ser de color blanco con bandas rojas y
+                                            escudos del
+                                            Ayuntamiento de Madrid en las puertas.</p>
+                                            <i class="i-margin icon-phone"></i><strong>Teléfonos:</strong> 914 804
+                                            613 / 914 804 619 /
+                                            914 804 623</p>
+                                            <p><strong>Paradas:</strong><br />
+                                                <i class="i-margin icon-map-marker"></i>Terminal 1, en la planta 0
+                                                en llegadas y en la
+                                                planta 1 en salidas.<br />
+                                                <i class="i-margin icon-map-marker"></i>Terminal 2, en la planta 0
+                                                en llegadas y en la
+                                                planta 2 en salidas.<br />
+                                                <i class="i-margin icon-map-marker"></i>Terminal 3, en la planta 0
+                                                en llegadas.<br />
+                                                <i class="i-margin icon-map-marker"></i>Terminal 4, en la planta 0
+                                                en llegadas y en la
+                                                planta 2 de salidas.
+                                            </p>
+                                            <i class="i-margin icon-taxi" style=" font-size: 25px""></i><a href="
+                                                https://www.aeropuertos.net/aeropuerto-de-madrid-barajas-taxis/">Taxis
+                                                en
+                                                Madrid-Barajas</a><br />
+                                        </div>
+                                        <div id="tab2" class="tab-content">
+                                            Las paradas y los lugares donde se podrá abordar los autobuses urbanos,
+                                            interurbanos y de
+                                            largo recorrido son en los terminales 1, 2, 3.</p>
+                                            <h3>Autobuses urbanos</h3>
+                                            <i class="i-margin icon-phone"></i><strong>Teléfono para autobuses
+                                                urbanos:</strong> 91 406
+                                            88 10</p>
+                                            <i class="i-margin icon-caret-right"></i>Línea 101<br />
+                                            <i class="i-margin icon-caret-right"></i>Línea Exprés (Línea 203)<br />
+                                            <i class="i-margin icon-caret-right"></i>Línea 200</p>
+                                            <h3>Autobuses interurbanos</h3>
+                                            <i class="i-margin icon-phone"></i><strong>Teléfono para autobuses
+                                                interurbanos:</strong>
+                                            012</p>
+                                            <i class="i-margin icon-caret-right"></i>Línea 827<br />
+                                            <i class="i-margin icon-caret-right"></i>Línea 828<br />
+                                            <i class="i-margin icon-caret-right"></i>Línea 822<br />
+                                            <i class="i-margin icon-caret-right"></i>Línea 824</p>
+                                            <h3>Autobuses de largo recorrido</h3>
+                                            <i class="i-margin icon-caret-right"></i>Avanzabus<br />
+                                            <i class="i-margin icon-phone"></i><strong>Teléfono:</strong> (+34) 91
+                                            272 28 32</p>
+                                            <i class="i-margin icon-caret-right"></i>Alsa<br />
+                                            <i class="i-margin icon-phone"></i><strong>Teléfono:</strong> (+34) 90
+                                            242 22 42</p>
+                                            <i class="i-margin icon-caret-right"></i>Socibus<br />
+                                            <i class="i-margin icon-phone"></i><strong>Teléfono:</strong> (+34) 90
+                                            222 92 92</p>
+                                            <i class="i-margin icon-bus" style=" font-size: 25px""></i><a href="
+                                                https://www.aeropuertos.net/aeropuerto-de-madrid-barajas-autobuses/">Autobuses
+                                                en
+                                                Madrid-Barajas</a><br />
+                                        </div>
+                                        <div id="tab3" class="tab-content">
+                                            Las paradas y ubicación del metro se encuentran en Aeropuerto T4 del
+                                            terminal 4 de la planta
+                                            1, además del Aeropuerto T1, T2 y T3, terminal 2 en la planta 1. Desde
+                                            <strong>Terminal
+                                                2</strong> del aeropuerto puedes coger el metro al centro de
+                                            <strong>Madrid</strong>. La
+                                            <strong>T2</strong> se comunica fácilmente con las <strong>terminales 1
+                                                y 3</strong>. Para
+                                            conectar la estación T4 existe una nueva estación de metro.</p>
+                                            <i class="i-margin icon-caret-right"></i><strong>Linea 8 de
+                                                metro</strong><br />
+                                            La línea 8 del Metro conecta la estación de Nuevos Ministerios, en el
+                                            centro de Madrid, con
+                                            todas las terminales del aeropuerto en 12-15 minutos aprox.</p>
+                                            <i class="i-margin icon-phone"></i><strong>Teléfonos:</strong><br />
+                                            <i class="i-margin icon-sign-out"></i>Atención al cliente: 91 779 63
+                                            99<br />
+                                            <i class="i-margin icon-sign-out"></i>Teléfono de información: 90 244 44
+                                            03</p>
+                                            <i class="i-margin icon-money"></i><strong>Tarifas:</strong><br />
+                                            <i class="i-margin icon-sign-out"></i>Billete sencillo Metro zona
+                                            A+suplemento* aeropuerto:
+                                            4,50 &#8211; 5 €<br />
+                                            <i class="i-margin icon-sign-out"></i>Billete sencillo
+                                            combinado+suplemento* aeropuerto: 6
+                                            €<br />
+                                            <i class="i-margin icon-sign-out"></i>Billete suplemento* aeropuerto: 3
+                                            €</p>
+                                            <i class="i-margin icon-subway" style=" font-size: 25px""></i><a href="
+                                                https://www.aeropuertos.net/aeropuerto-de-madrid-barajas-metro/">Metro
+                                                en
+                                                Madrid-Barajas</a><br />
+                                        </div>
+                                        <div id="tab4" class="tab-content">
+                                            El lugar de ubicación y la parada del tren es en el Terminal T4, en la
+                                            planta -1, en la
+                                            Estación de cercanías.</p>
+                                            <i class="i-margin icon-caret-right"></i><strong>Línea
+                                                C-1</strong><br />
+                                            La <strong>línea C1</strong> de Renfe Cercanías conecta la T4 del
+                                            Aeropuerto Madrid con el
+                                            centro de la capital.</p>
+                                            <i class="i-margin icon-phone"></i><strong>Teléfonos:</strong><br />
+                                            <i class="i-margin icon-sign-out"></i>Teléfono de información: 91 232 03
+                                            20</p>
+                                            <i class="i-margin icon-money"></i><strong>Tarifas:</strong><br />
+                                            <i class="i-margin icon-sign-out"></i>Billete sencillo: 2,60 €.<br />
+                                            <i class="i-margin icon-sign-out"></i>Ida y vuelta: 5,20 €.<br />
+                                            <i class="i-margin icon-sign-out"></i>Bonotren: abono de 10 viajes
+                                            sencillos, válido durante
+                                            un mes.<br />
+                                            <i class="i-margin icon-sign-out"></i>Abono mensual: válido para dos
+                                            viajes diarios durante
+                                            un mes.</p>
+                                            <i class="i-margin icon-train" style=" font-size: 25px""></i><a href="
+                                                https://www.aeropuertos.net/aeropuerto-de-madrid-barajas-trenes/">Trenes
+                                                en
+                                                Madrid-Barajas</a><br />
+                                        </div>
+                                        <div id="tab5" class="tab-content">
+                                            Los módulos de alquiler de coche en el <strong>Aeropuerto de Madrid
+                                                &#8211; Barajas</strong>
+                                            se encuentran en la Terminal T4 y la Terminal T1. Las empresas de
+                                            alquiler de coches que se
+                                            ofrecen en el aeropuerto son: <strong>Europcar, Avis, Hertz, Enterprise
+                                                Atesa, entre
+                                                otras</strong>.</p>
+                                            <i class="i-margin icon-caret-right"></i><strong>Hertz</strong><br />
+                                            <i class="i-margin icon-phone"></i><strong>Teléfono:</strong> (+34) 90
+                                            230 52 30<br />
+                                            <i class="i-margin icon-map-marker"></i><strong>Ubicación:</strong>
+                                            Terminal T1. Planta 0.
+                                            </p>
+                                            <i class="i-margin icon-caret-right"></i><strong>Avis</strong><br />
+                                            <i class="i-margin icon-phone"></i><strong>Teléfono:</strong> (+34) 90
+                                            220 01 62<br />
+                                            <i class="i-margin icon-map-marker"></i><strong>Ubicación:</strong>
+                                            Terminal T1. Planta 0
+                                            </p>
+                                            <i class="i-margin icon-caret-right"></i><strong>Enterprise Rent a
+                                                Car</strong><br />
+                                            <i class="i-margin icon-phone"></i><strong>Teléfono:</strong> (+34) 91
+                                            275 09 95<br />
+                                            <i class="i-margin icon-map-marker"></i><strong>Ubicación:</strong>
+                                            Terminal T1. Planta 0
+                                            </p>
+                                            <i class="i-margin icon-caret-right"></i><strong>Europcar</strong><br />
+                                            <i class="i-margin icon-phone"></i><strong>Teléfono:</strong> (+34) 91
+                                            150 50 00<br />
+                                            <i class="i-margin icon-map-marker"></i><strong>Ubicación:</strong>
+                                            Terminal T1. Planta 0
+                                            </p>
+                                            <i class="i-margin icon-car" style=" font-size: 25px""></i><a href="
+                                                https://www.aeropuertos.net/aeropuerto-de-madrid-barajas-alquiler-de-coches/">Alquiler
+                                                de coches en Madrid-Barajas</a><br />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rgg-imagegrid gallery" rgg_id="1">
+        
+                                    <a rel="rgg"
+                                        href="https://www.aeropuertos.net/wp-content/uploads/2011/06/Logo-Aeropuerto-Internacional-de-Madrid-Barajas.png"
+                                        title=""><img width="200" height="50"
+                                            src="https://www.aeropuertos.net/wp-content/uploads/2011/06/Logo-Aeropuerto-Internacional-de-Madrid-Barajas.png"
+                                            class="attachment-medium size-medium" alt="" loading="lazy"
+                                            srcset="https://www.aeropuertos.net/wp-content/uploads/2011/06/Logo-Aeropuerto-Internacional-de-Madrid-Barajas.png 200w, https://www.aeropuertos.net/wp-content/uploads/2011/06/Logo-Aeropuerto-Internacional-de-Madrid-Barajas-150x38.png 150w"
+                                            sizes="(max-width: 200px) 100vw, 200px" data-copyright=""
+                                            data-headline="Madrid" data-description="" /></a><a rel="rgg"
+                                        href="https://www.aeropuertos.net/wp-content/uploads/2012/01/instalaciones-apt-mad.jpg"
+                                        title=""><img width="300" height="198"
+                                            src="https://www.aeropuertos.net/wp-content/uploads/2012/01/instalaciones-apt-mad-300x198.jpg"
+                                            class="attachment-medium size-medium" alt="" loading="lazy"
+                                            srcset="https://www.aeropuertos.net/wp-content/uploads/2012/01/instalaciones-apt-mad-300x198.jpg 300w, https://www.aeropuertos.net/wp-content/uploads/2012/01/instalaciones-apt-mad-150x99.jpg 150w, https://www.aeropuertos.net/wp-content/uploads/2012/01/instalaciones-apt-mad.jpg 500w"
+                                            sizes="(max-width: 300px) 100vw, 300px" data-copyright=""
+                                            data-headline="instalaciones apt mad" data-description="" /></a><a
+                                        rel="rgg"
+                                        href="https://www.aeropuertos.net/wp-content/uploads/2012/05/Aeropuerto-de-Madrid-Barajas-MAD-1024x768.jpg"
+                                        title="Aeropuerto de Madrid-Barajas exterior"><img
+                                            data-author-url="http://www.flickr.com/photos/11537264@N00/1298334637"
+                                            width="300" height="225"
+                                            src="https://www.aeropuertos.net/wp-content/uploads/2012/05/Aeropuerto-de-Madrid-Barajas-MAD-300x225.jpg"
+                                            class="attachment-medium size-medium" alt="" loading="lazy"
+                                            srcset="https://www.aeropuertos.net/wp-content/uploads/2012/05/Aeropuerto-de-Madrid-Barajas-MAD-300x225.jpg 300w, https://www.aeropuertos.net/wp-content/uploads/2012/05/Aeropuerto-de-Madrid-Barajas-MAD-150x113.jpg 150w, https://www.aeropuertos.net/wp-content/uploads/2012/05/Aeropuerto-de-Madrid-Barajas-MAD-768x576.jpg 768w, https://www.aeropuertos.net/wp-content/uploads/2012/05/Aeropuerto-de-Madrid-Barajas-MAD.jpg 1024w"
+                                            sizes="(max-width: 300px) 100vw, 300px" data-copyright=""
+                                            data-headline="Aeropuerto de Madrid-Barajas exterior"
+                                            data-description="" /></a><a rel="rgg"
+                                        href="https://www.aeropuertos.net/wp-content/uploads/2012/05/53811812-1024x768.jpg"
+                                        title=""><img data-author-url="http://www.panoramio.com/photo/53811812"
+                                            width="300" height="225"
+                                            src="https://www.aeropuertos.net/wp-content/uploads/2012/05/53811812-300x225.jpg"
+                                            class="attachment-medium size-medium" alt="" loading="lazy"
+                                            srcset="https://www.aeropuertos.net/wp-content/uploads/2012/05/53811812-300x225.jpg 300w, https://www.aeropuertos.net/wp-content/uploads/2012/05/53811812-150x113.jpg 150w, https://www.aeropuertos.net/wp-content/uploads/2012/05/53811812-768x576.jpg 768w, https://www.aeropuertos.net/wp-content/uploads/2012/05/53811812.jpg 1024w"
+                                            sizes="(max-width: 300px) 100vw, 300px" data-copyright=""
+                                            data-headline="Madrid Barajas T16" data-description="" /></a><a
+                                        rel="rgg"
+                                        href="https://www.aeropuertos.net/wp-content/uploads/2012/05/8719467.jpg"
+                                        title=""><img data-author-url="http://www.panoramio.com/photo/8719467"
+                                            width="300" height="225"
+                                            src="https://www.aeropuertos.net/wp-content/uploads/2012/05/8719467-300x225.jpg"
+                                            class="attachment-medium size-medium" alt="" loading="lazy"
+                                            srcset="https://www.aeropuertos.net/wp-content/uploads/2012/05/8719467-300x225.jpg 300w, https://www.aeropuertos.net/wp-content/uploads/2012/05/8719467-150x113.jpg 150w, https://www.aeropuertos.net/wp-content/uploads/2012/05/8719467-768x576.jpg 768w, https://www.aeropuertos.net/wp-content/uploads/2012/05/8719467.jpg 1000w"
+                                            sizes="(max-width: 300px) 100vw, 300px" data-copyright=""
+                                            data-headline="Madrid, Spain. Outside Barajas T1 Terminal"
+                                            data-description="" /></a><a rel="rgg"
+                                        href="https://www.aeropuertos.net/wp-content/uploads/2012/05/36086121-1024x727.jpg"
+                                        title=""><img data-author-url="http://www.panoramio.com/photo/36086121"
+                                            width="300" height="213"
+                                            src="https://www.aeropuertos.net/wp-content/uploads/2012/05/36086121-300x213.jpg"
+                                            class="attachment-medium size-medium" alt="" loading="lazy"
+                                            srcset="https://www.aeropuertos.net/wp-content/uploads/2012/05/36086121-300x213.jpg 300w, https://www.aeropuertos.net/wp-content/uploads/2012/05/36086121-150x106.jpg 150w, https://www.aeropuertos.net/wp-content/uploads/2012/05/36086121-768x545.jpg 768w, https://www.aeropuertos.net/wp-content/uploads/2012/05/36086121.jpg 1024w"
+                                            sizes="(max-width: 300px) 100vw, 300px" data-copyright=""
+                                            data-headline="Aeropuerto de Barajas, Madrid, España"
+                                            data-description="" /></a><a rel="rgg"
+                                        href="https://www.aeropuertos.net/wp-content/uploads/2012/05/3431529-1024x683.jpg"
+                                        title=""><img data-author-url="http://www.panoramio.com/photo/3431529"
+                                            width="300" height="200"
+                                            src="https://www.aeropuertos.net/wp-content/uploads/2012/05/3431529-300x200.jpg"
+                                            class="attachment-medium size-medium" alt="" loading="lazy"
+                                            srcset="https://www.aeropuertos.net/wp-content/uploads/2012/05/3431529-300x200.jpg 300w, https://www.aeropuertos.net/wp-content/uploads/2012/05/3431529-150x100.jpg 150w, https://www.aeropuertos.net/wp-content/uploads/2012/05/3431529-768x512.jpg 768w, https://www.aeropuertos.net/wp-content/uploads/2012/05/3431529.jpg 1024w"
+                                            sizes="(max-width: 300px) 100vw, 300px" data-copyright=""
+                                            data-headline="Metro de Madrid en el terminal aéreo de Barajas"
+                                            data-description="" /></a><a rel="rgg"
+                                        href="https://www.aeropuertos.net/wp-content/uploads/2012/09/10387918-1024x768.jpg"
+                                        title="Vista panor&aacute;mica del Aeropuerto Madrid Barajas"><img
+                                            data-author-url="http://www.panoramio.com/photo/10387918" width="300"
+                                            height="225"
+                                            src="https://www.aeropuertos.net/wp-content/uploads/2012/09/10387918-300x225.jpg"
+                                            class="attachment-medium size-medium" alt="" loading="lazy"
+                                            srcset="https://www.aeropuertos.net/wp-content/uploads/2012/09/10387918-300x225.jpg 300w, https://www.aeropuertos.net/wp-content/uploads/2012/09/10387918-150x113.jpg 150w, https://www.aeropuertos.net/wp-content/uploads/2012/09/10387918-768x576.jpg 768w, https://www.aeropuertos.net/wp-content/uploads/2012/09/10387918.jpg 1024w"
+                                            sizes="(max-width: 300px) 100vw, 300px" data-copyright=""
+                                            data-headline="Vista panorámica del Aeropuerto Madrid Barajas"
+                                            data-description="" /></a><a rel="rgg"
+                                        href="https://www.aeropuertos.net/wp-content/uploads/2012/09/Pasillos-del-T2-Aeropuerto-Madrid-Barajas-1024x768.jpg"
+                                        title="Pasillos de la T2"><img width="300" height="225"
+                                            src="https://www.aeropuertos.net/wp-content/uploads/2012/09/Pasillos-del-T2-Aeropuerto-Madrid-Barajas-300x225.jpg"
+                                            class="attachment-medium size-medium" alt="" loading="lazy"
+                                            srcset="https://www.aeropuertos.net/wp-content/uploads/2012/09/Pasillos-del-T2-Aeropuerto-Madrid-Barajas-300x225.jpg 300w, https://www.aeropuertos.net/wp-content/uploads/2012/09/Pasillos-del-T2-Aeropuerto-Madrid-Barajas-150x113.jpg 150w, https://www.aeropuertos.net/wp-content/uploads/2012/09/Pasillos-del-T2-Aeropuerto-Madrid-Barajas-768x576.jpg 768w, https://www.aeropuertos.net/wp-content/uploads/2012/09/Pasillos-del-T2-Aeropuerto-Madrid-Barajas.jpg 1024w"
+                                            sizes="(max-width: 300px) 100vw, 300px" data-copyright=""
+                                            data-headline="Pasillos de la T2" data-description="" /></a><a rel="rgg"
+                                        href="https://www.aeropuertos.net/wp-content/uploads/2009/03/Aeropuerto-Adolfo-Suarez-Madrid-Barajas-1024x681.jpg"
+                                        title="Aeropuerto Adolfo Su&aacute;rez Madrid-Barajas Exterior"><img
+                                            width="300" height="199"
+                                            src="https://www.aeropuertos.net/wp-content/uploads/2009/03/Aeropuerto-Adolfo-Suarez-Madrid-Barajas-300x199.jpg"
+                                            class="attachment-medium size-medium" alt="" loading="lazy"
+                                            srcset="https://www.aeropuertos.net/wp-content/uploads/2009/03/Aeropuerto-Adolfo-Suarez-Madrid-Barajas-300x199.jpg 300w, https://www.aeropuertos.net/wp-content/uploads/2009/03/Aeropuerto-Adolfo-Suarez-Madrid-Barajas-150x100.jpg 150w, https://www.aeropuertos.net/wp-content/uploads/2009/03/Aeropuerto-Adolfo-Suarez-Madrid-Barajas-768x511.jpg 768w, https://www.aeropuertos.net/wp-content/uploads/2009/03/Aeropuerto-Adolfo-Suarez-Madrid-Barajas-1024x681.jpg 1024w, https://www.aeropuertos.net/wp-content/uploads/2009/03/Aeropuerto-Adolfo-Suarez-Madrid-Barajas.jpg 1280w"
+                                            sizes="(max-width: 300px) 100vw, 300px" data-copyright=""
+                                            data-headline="Aeropuerto Adolfo Suárez Madrid-Barajas Exterior"
+                                            data-description="" /></a><a rel="rgg"
+                                        href="https://www.aeropuertos.net/wp-content/uploads/2009/03/aeropuertonetmadrid-1024x190.jpg"
+                                        title=""><img width="300" height="56"
+                                            src="https://www.aeropuertos.net/wp-content/uploads/2009/03/aeropuertonetmadrid-300x56.jpg"
+                                            class="attachment-medium size-medium" alt="" loading="lazy"
+                                            srcset="https://www.aeropuertos.net/wp-content/uploads/2009/03/aeropuertonetmadrid-300x56.jpg 300w, https://www.aeropuertos.net/wp-content/uploads/2009/03/aeropuertonetmadrid-150x28.jpg 150w, https://www.aeropuertos.net/wp-content/uploads/2009/03/aeropuertonetmadrid-768x142.jpg 768w, https://www.aeropuertos.net/wp-content/uploads/2009/03/aeropuertonetmadrid-1024x190.jpg 1024w, https://www.aeropuertos.net/wp-content/uploads/2009/03/aeropuertonetmadrid.jpg 1280w"
+                                            sizes="(max-width: 300px) 100vw, 300px" data-copyright=""
+                                            data-headline="Aeropuerto de Madrid" data-description="" /></a><a
+                                        rel="rgg"
+                                        href="https://www.aeropuertos.net/wp-content/uploads/2009/03/aeropuerto-madrid-barajas-1024x682.jpg"
+                                        title="Interiores del Aeropuerto Madrid Barajas."><img
+                                            data-author-url="https://commons.wikimedia.org/wiki/File:Barajas_Airport_(Madrid)_(4684560779).jpg"
+                                            width="300" height="200"
+                                            src="https://www.aeropuertos.net/wp-content/uploads/2009/03/aeropuerto-madrid-barajas-300x200.jpg"
+                                            class="attachment-medium size-medium" alt="" loading="lazy"
+                                            srcset="https://www.aeropuertos.net/wp-content/uploads/2009/03/aeropuerto-madrid-barajas-300x200.jpg 300w, https://www.aeropuertos.net/wp-content/uploads/2009/03/aeropuerto-madrid-barajas-150x100.jpg 150w, https://www.aeropuertos.net/wp-content/uploads/2009/03/aeropuerto-madrid-barajas-768x512.jpg 768w, https://www.aeropuertos.net/wp-content/uploads/2009/03/aeropuerto-madrid-barajas-1024x682.jpg 1024w, https://www.aeropuertos.net/wp-content/uploads/2009/03/aeropuerto-madrid-barajas.jpg 1280w"
+                                            sizes="(max-width: 300px) 100vw, 300px" data-copyright=""
+                                            data-headline="Interiores del Aeropuerto Madrid Barajas."
+                                            data-description="" /></a>
+                                </div>
+                                <div style="clear:both"></div>
+        
+                                <h2><span id="Custodia_de_equipajes"><i class="i-margin icon-suitcase"></i>Custodia
+                                        de equipajes</span>
+                                </h2>
+                                <p>El <strong> Aeropuerto Adolfo Suárez Madrid-Barajas </strong> pone a disposición
+                                    de los usuarios, a
+                                    través de la empresa Excess Baggage Company, un servicio de consigna de
+                                    equipajes, para que guarde
+                                    sus pertenencias por espacios cortos o medios de tiempo. Las consignas de
+                                    equipaje del aeropuerto
+                                    tienen diferentes horarios y localización, consulte el detalle a continuación.
+                                </p>
+                                <p><strong> Tarifas: </strong><br />
+                                    De <strong>0 a 2</strong> horas: <strong>6,00 €</strong> por pieza<br />
+                                    De <strong>2 a 24</strong> horas: <strong>10,00 €</strong> por pieza<br />
+                                    +24 horas (por cada día adicional): <strong>10,00 €</strong> por pieza</p>
+                                <p><strong> Oficinas: </strong><br />
+                                    Las oficinas están abiertas las 24 horas del día y durante todo el año:<br />
+                                    Edificio de la <strong> terminal T4 </strong> en la planta 0 en el Vestíbulo de
+                                    Llegadas.<br />
+                                    Edificio de la <strong> terminal T1 </strong> en la planta 0, frente a la Sala 2
+                                    de recogida de
+                                    equipajes en la zona ajardinada.<br />
+                                    Edificio de la <strong> terminal T2 </strong> en la planta 1 en el Vestíbulo de
+                                    Llegadas, a 30
+                                    metros de la parada de metro T1-T2-T3.</p>
+                                <p><strong> Teléfonos: </strong><br />
+                                    <strong>T1:</strong> 913 936 938<br />
+                                    <strong>T4:</strong> 917 466 065
+                                </p>
+                                <h2 class="icon"><span id="Instalaciones_del_aeropuerto_de_Madrid">
+                                        <div class="icono avion"></div>
+                                        <div class="text_w_icon">Instalaciones del aeropuerto de Madrid</div>
+                                    </span></h2>
+                                <div class='accordion_holder toggle'>
+                                    <h4><span class='icon'><span class='control-pm'></span></span><span
+                                            class='text'>Información del
+                                            aeropuerto Barajas</span></h4>
+                                    <div class='accordion_content'>
+                                        <div class='accordion_content_inner'>
+                                            <div id="attachment_52093" style="width: 310px"
+                                                class="wp-caption alignright"><a
+                                                    href="https://www.aeropuertos.net/wp-content/uploads/2009/03/aeropuerto-madrid-barajas.jpg"><img
+                                                        data-author-url="https://commons.wikimedia.org/wiki/File:Barajas_Airport_(Madrid)_(4684560779).jpg"
+                                                        loading="lazy" class="size-medium wp-image-52093"
+                                                        src="https://www.aeropuertos.net/wp-content/uploads/2009/03/aeropuerto-madrid-barajas-300x200.jpg"
+                                                        alt="Aeropuerto Madrid" width="300" height="200"
+                                                        data-headline="Interiores del Aeropuerto Barajas - Madrid."
+                                                        srcset="https://www.aeropuertos.net/wp-content/uploads/2009/03/aeropuerto-madrid-barajas-300x200.jpg 300w, https://www.aeropuertos.net/wp-content/uploads/2009/03/aeropuerto-madrid-barajas-150x100.jpg 150w, https://www.aeropuertos.net/wp-content/uploads/2009/03/aeropuerto-madrid-barajas-768x512.jpg 768w, https://www.aeropuertos.net/wp-content/uploads/2009/03/aeropuerto-madrid-barajas-1024x682.jpg 1024w, https://www.aeropuertos.net/wp-content/uploads/2009/03/aeropuerto-madrid-barajas.jpg 1280w"
+                                                        sizes="(max-width: 300px) 100vw, 300px" /></a>
+                                                <p class="wp-caption-text">Interiores del Aeropuerto &#8211;
+                                                    Barajas.</p>
+                                            </div>
+                                            <p>El Aeropuerto de Madrid Barajas, está situado en las inmediaciones de
+                                                la ciudad de
+                                                Madrid, la capital de España. Por otra parte, es el primer
+                                                aeropuerto español por
+                                                tráfico de pasajeros, carga aérea y operaciones, así como el quinto
+                                                de Europa y vigésimo
+                                                noveno del mundo por número de pasajeros. Dentro de sus
+                                                intalaciones, cuenta con
+                                                máquinas para facturar e imprimir la tarjeta de embarque que están
+                                                ubicadas junto a los
+                                                mostradores de facturación en cada terminal. Las compañías que
+                                                ofrecen este servicio en
+                                                el aeropuerto Adolfo Suárez Madrid-Barajas son: <a
+                                                    href="https://www.aeropuertos.net/air-europa/">Air Europa</a>,
+                                                Delta Air Lines,
+                                                Egyptair, Turkish Airways, Aegean, Air Europa, Air France, KLM,
+                                                Lufthansa, American
+                                                Airlines, Iberia y LATAM Airlines.</p>
+                                            <p>Todos los pasajeros deben pasar el<strong> control de
+                                                    seguridad</strong> para acceder a
+                                                la zona de embarque atravesando un arco <strong>detector de
+                                                    metales</strong> y pasando
+                                                su equipaje de mano y el resto de los objetos como abrigos,
+                                                chaquetas, móviles y llaves
+                                                por un equipo de rayos-X.<br />
+                                        </div>
+                                    </div>
+                                    <h4><span class='icon'><span class='control-pm'></span></span><span
+                                            class='text'> Casas de
+                                            cambio</span></h4>
+                                    <div class='accordion_content'>
+                                        <div class='accordion_content_inner'>
+                                            <p>El Aeropuerto de Madrid cuenta con <strong>un banco, 2 casas de
+                                                    cambio y cajeros
+                                                    automáticos (ATMS)</strong>, donde puedes realizar el
+                                                <strong>cambio de
+                                                    divisas</strong> como del <strong>dólar (USD) a euro
+                                                    (EUR)</strong>.
+                                            </p>
+                                            <h2><span id="Banco"><i class="i-margin icon-money"></i>Banco</span>
+                                            </h2>
+                                            <h3><i class="i-margin icon-coin-dollar"></i><strong>Bankia</strong>
+                                            </h3>
+                                            <i class="i-margin icon-map-marker"></i><strong>Ubicación:</strong>
+                                            Terminal T4 planta 2.
+                                            Zona de facturación.<br />
+                                            <i class="i-margin icon-clock"></i><strong>Horario</strong>:</p>
+                                            <ul>
+                                                <li>Lunes a Viernes: De 8:15 a 14:15 horas.</li>
+                                                <li>Jueves: De 8:15 a 14:15 y de 16:45 a 19:15 horas.</li>
+                                            </ul>
+                                            <p></p>
+                                            <i class="i-margin icon-phone"></i><strong>Teléfono:</strong> (+34) 91
+                                            333 82 40<br />
+                                            <i class="i-margin icon-external-link"></i><strong>Página web:</strong>
+                                            <a href="https://www.bankia.es/es/particulares"
+                                                rel="nofollow">www.bankia.es</a></p>
+                                            <h2><span id="Casas_de_cambio"><i class="i-margin icon-money"></i>Casas
+                                                    de cambio</span>
+                                            </h2>
+                                            <i class="i-margin icon-coin-dollar"></i><strong>Global
+                                                Exchange</strong></p>
+                                            <i class="i-margin icon-external-link"></i><strong>Página web:</strong>
+                                            <a href="http://www.global-exchange.com/" target="_blank"
+                                                rel="nofollow noopener">www.global-exchange.com/</a><br />
+                                            <i class="i-margin icon-phone"></i>Teléfono: 90 085 55 50 / 91 305 51 67
+                                            </p>
+                                            <i class="i-margin icon-map-marker"></i> Terminal T4, planta 1. Zona de
+                                            embarque J.<br />
+                                            <i class="i-margin icon-clock"></i>Horario: De 6:30 a 23:30 horas.</p>
+                                            <i class="i-margin icon-map-marker"></i> Terminal T4, planta 2. Zona de
+                                            facturación.<br />
+                                            <i class="i-margin icon-clock"></i>Horario: 24 horas.</p>
+                                            <i class="i-margin icon-sign-out"></i> El cambio de moneda está sujeta
+                                            al tipo de cambio
+                                            actual. Conoce <a
+                                                href="https://www.aeropuertos.net/aeropuerto-de-madrid-barajas-cambio-de-divisas/">más
+                                                cajeros automáticos en el Aeropuerto de Madrid Barajas</a>.</p>
+                                        </div>
+                                    </div>
+                                    <h4><span class='icon'><span class='control-pm'></span></span><span
+                                            class='text'> Parking</span>
+                                    </h4>
+                                    <div class='accordion_content'>
+                                        <div class='accordion_content_inner'>
+                                            Las zonas de parking del aeropuerto Madrid se encuentran ubicados en los
+                                            terminales T1, T2,
+                                            T3 y T4.<br />
+                                            Por otra parte, cada parking tiene diferentes tipos de modalidades,
+                                            existen
+                                            <strong>aparcamientos para cortas y largas estancias</strong>. Existe
+                                            otra área disponible
+                                            para aparcamientos de larga estancia con una capacidad cercana a los
+                                            <strong>3000
+                                                automóviles</strong>, y otro <strong>aparcamiento Express</strong>
+                                            en la T2. Todos los
+                                            sitios destinados a aparcamiento cuentan con lugares reservados para
+                                            <strong>personas
+                                                discapacitadas</strong> y los pagos pueden ser realizados con
+                                            <strong>efectivo o tarjeta
+                                                de crédito</strong>.</p>
+                                            <i class="i-margin icon-caret-right"></i><strong>Parking de bajo
+                                                coste</strong><br />
+                                            <i class="i-margin icon-phone"></i><strong>Teléfono:</strong> (+34) 90
+                                            240 47 04 / (+34) 91
+                                            321 10 00<br />
+                                            <i class="i-margin icon-map-marker"></i><strong>Ubicación:</strong>
+                                            Terminales T1, T2, T3 y
+                                            T4</p>
+                                            <i class="i-margin icon-caret-right"></i><strong>Parking de larga
+                                                estancia</strong><br />
+                                            <i class="i-margin icon-phone"></i><strong>Teléfono:</strong> (+34) 91
+                                            321 10 00 // 902 404
+                                            704<br />
+                                            <i class="i-margin icon-map-marker"></i><strong>Ubicación:</strong>
+                                            terminales T1, T2, T3 y
+                                            T4</p>
+                                            <i class="i-margin icon-caret-right"></i><strong>Aparcamiento
+                                                preferente</strong><br />
+                                            <i class="i-margin icon-phone"></i><strong>Teléfono:</strong> (+34) 91
+                                            321 10 00 // 902 404
+                                            704<br />
+                                            <i class="i-margin icon-map-marker"></i><strong>Ubicación:</strong>
+                                            Terminal T4 y T2</p>
+                                            <i class="i-margin icon-caret-right"></i><strong>Parking
+                                                exprés</strong><br />
+                                            <i class="i-margin icon-phone"></i><strong>Teléfono:</strong> (+34) 91
+                                            321 10 00 // 902 404
+                                            704<br />
+                                            <i class="i-margin icon-map-marker"></i><strong>Ubicación:</strong>
+                                            Terminal T2</p>
+                                            <i class="i-margin icon-caret-right"></i><strong>Parking VIP
+                                            </strong><br />
+                                            <i class="i-margin icon-phone"></i><strong>Teléfono:</strong> 902 404
+                                            704 / (+34) 91 321 10
+                                            00<br />
+                                            <i class="i-margin icon-map-marker"></i><strong>Ubicación:</strong>
+                                            Terminal T1, T2 y T4</p>
+                                            <p>El Aeropuerto Barajas &#8211; Madrid también cuenta con aparcamientos
+                                                para motocicletas y
+                                                bicicletas.</p>
+                                            <i class="i-margin icon-parking" style=" font-size: 25px""></i><a href="
+                                                https://www.aeropuertos.net/aeropuerto-de-madrid-barajas-aparcamiento/">Aparcamiento
+                                                en
+                                                Madrid-Barajas</a></p>
+                                        </div>
+                                    </div>
+                                    <h4><span class='icon'><span class='control-pm'></span></span><span
+                                            class='text'> Centros de
+                                            Información</span></h4>
+                                    <div class='accordion_content'>
+                                        <div class='accordion_content_inner'>
+                                            Las <a
+                                                href="https://www.aeropuertos.net/aeropuerto-de-madrid-barajas-instalaciones-del-aeropuerto/">instalaciones
+                                                del aeropuerto</a> ofrecen más de 22 puntos donde podrás obtener
+                                            información, incluyendo
+                                            una oficina de la Red Nacional de Ferrocarriles Españoles.<br />
+                                            <i class="i-margin icon-caret-right"></i><strong>Teléfono:</strong>
+                                            (+34) 91 321 10 00 / 90
+                                            240 47 04<br />
+        
+                                            <ul class="icons">
+                                                <li><i class="icon-sign-out"></i> <strong>Terminal T4.</strong>
+                                                    Planta -2. Zona
+                                                    exclusiva para pasajeros</li>
+                                                <li><i class="icon-sign-out"></i> <strong>Terminal T4.</strong>
+                                                    Planta 1. Zona de
+                                                    embarque J</li>
+                                                <li><i class="icon-sign-out"></i> <strong>Terminal T4.</strong>
+                                                    Planta 1. Zona de
+                                                    embarque J</li>
+                                                <li><i class="icon-sign-out"></i> <strong>Terminal T4.</strong>
+                                                    Planta 1. Zona de
+                                                    embarque K</li>
+                                                <li><i class="icon-sign-out"></i> <strong>Terminal T4.</strong>
+                                                    Planta 2. Zona de
+                                                    facturación</li>
+                                                <li><i class="icon-sign-out"></i> <strong>Terminal T4
+                                                        Satélite</strong>. Planta 0. Zona
+                                                    de embarque M</li>
+                                                <li><i class="icon-sign-out"></i> <strong>Terminal T4
+                                                        Satélite.</strong> Planta 1. Zona
+                                                    de embarque S</li>
+                                            </ul>
+        
+                                        </div>
+                                    </div>
+                                    <h4><span class='icon'><span class='control-pm'></span></span><span
+                                            class='text'> Hoteles</span>
+                                    </h4>
+                                    <div class='accordion_content'>
+                                        <div class='accordion_content_inner'>
+                                            Dentro del <strong>Aeropuerto Madrid &#8211; Barajas</strong> no hay
+                                            hoteles, sin embargo,
+                                            muy cerca de sus <a
+                                                href="https://www.aeropuertos.net/aeropuerto-de-madrid-barajas-instalaciones-del-aeropuerto/">instalaciones</a>
+                                            se encuentra el hotel Hostal Viky, que está situado a tan solo a 0,9
+                                            Kilómetros del
+                                            aeropuerto. Sin embargo, existen otros hoteles cercanos al aeropuerto
+                                            como Clement Barajas,
+                                            Hotel Villa de Barajas y Hotel Barajas Plaza en donde el pasajero podrá
+                                            hospedarse.</p>
+                                            <i class="i-margin icon-caret-right"></i><strong>Hostal
+                                                Viky</strong><br />
+                                            <i class="i-margin icon-phone"></i><strong>Teléfono:</strong> (+34) 91
+                                            305 48 12 / 62 988 08
+                                            08<br />
+                                            <i class="i-margin icon-map-marker"></i><strong>Dirección:</strong>
+                                            Calle de Marte, 2, 28042
+                                            Madrid</p>
+                                            <i class="i-margin icon-caret-right"></i><strong>Clement
+                                                Barajas</strong><br />
+                                            <i class="i-margin icon-phone"></i><strong>Teléfono:</strong> (+34) 91
+                                            746 03 30<br />
+                                            <i class="i-margin icon-map-marker"></i><strong>Dirección:</strong>
+                                            Avenida General, 43 –
+                                            Madrid 28042</p>
+                                            <i class="i-margin icon-caret-right"></i><strong>Hotel Villa de
+                                                Barajas</strong><br />
+                                            <i class="i-margin icon-phone"></i><strong>Teléfono:</strong> (+34) 91
+                                            329 28 18<br />
+                                            <i class="i-margin icon-map-marker"></i><strong>Dirección:</strong> Av.
+                                            de Logroño, 331,
+                                            28042 Madrid</p>
+                                            <i class="i-margin icon-caret-right"></i><strong>Hotel Barajas
+                                                Plaza</strong><br />
+                                            <i class="i-margin icon-phone"></i><strong>Teléfono:</strong> (+34) 91
+                                            301 00 81<br />
+                                            <i class="i-margin icon-map-marker"></i><strong>Dirección:</strong> C/
+                                            Camarillas 5-7 28042
+                                            Barajas</p>
+                                            <i class="i-margin icon-hotel" style=" font-size: 25px""></i><a href="
+                                                https://www.aeropuertos.net/aeropuerto-adolfo-suarez-madrid-barajas-hoteles/">Hoteles
+                                                en
+                                                el Aeropuerto de Madrid-Barajas</a><br />
+                                        </div>
+                                    </div>
+                                    <h4><span class='icon'><span class='control-pm'></span></span><span
+                                            class='text'> Emergencias</span>
+                                    </h4>
+                                    <div class='accordion_content'>
+                                        <div class='accordion_content_inner'>
+                                            La atención médica en el <strong>Aeropuerto Madrid</strong> dura 24
+                                            horas al día y están
+                                            ubicadas en las siguientes terminales:</p>
+                                            <i class="i-margin icon-caret-right"></i><strong>Terminal T4.</strong>
+                                            Planta 0. Vestíbulo
+                                            de llegadas<br />
+                                            <i class="i-margin icon-sign-out"></i>Abierto 24 horas<br />
+                                            <i class="i-margin icon-caret-right"></i><strong>Terminal T4
+                                                Satélite</strong>. Planta 0.
+                                            Zona de embarque M<br />
+                                            <i class="i-margin icon-sign-out"></i>Abierto de 7.00 a 23.00<br />
+                                            <i class="i-margin icon-caret-right"></i><strong>Terminal T2</strong>.
+                                            Planta 0. Vestibulo
+                                            de llegadas<br />
+                                            <i class="i-margin icon-sign-out"></i>Abierto 24 horas</p>
+                                            <p><strong>Teléfono:</strong> 917 466 112</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <strong><a
+                                        href="https://www.aeropuertos.net/aeropuerto-de-madrid-barajas-instalaciones-del-aeropuerto/">
+                                        Más información sobre las instalaciones del aeropuerto</a></strong></p>
+                                <h2><span id="Carta_SIM_en_el_aeropuerto_MADRID_8211_tarjeta_SIM"><i
+                                            class="i-margin icon-thumbs-o-up"></i>Carta SIM en el aeropuerto MADRID
+                                        &#8211; tarjeta
+                                        SIM</span></h2>
+                                <p><strong>La Tienda multiservicios</strong> para el envío de equipaje, compra de
+                                    tarjetas o carta
+                                    SIM<br />
+                                    <strong><i class="i-margin icon-clock"></i>Horario de atención:</strong> 6:30 a
+                                    23:00 horas<br />
+                                    <strong><i class="i-margin icon-phone"></i>Teléfonos:</strong> 913 337 279<br />
+                                    <strong><i class="i-margin icon-map-marker"></i>Dirección:</strong> Terminal T4
+                                    en la planta 2, zona
+                                    pública de salidas
+                                </p>
+                                <h2 class="icon"><span id="Aeropuertos_cercanos_a_Madrid-Barajas_MAD">
+                                        <div class="icono avion"></div>
+                                        <div class="text_w_icon">Aeropuertos cercanos a Madrid-Barajas (MAD)</div>
+                                    </span></h2>
+                                <p><a title="Aeropuerto de Salamanca"
+                                        href="https://www.aeropuertos.net/aeropuerto-de-salamanca/">Aeropuerto de
+                                        Salamanca</a> (172
+                                    km)<br />
+                                    <a title="Aeropuerto de Valladolid"
+                                        href="https://www.aeropuertos.net/aeropuerto-de-valladolid/">Aeropuerto de
+                                        Valladolid</a> (174
+                                    km)<br />
+                                    <a title="Aeropuerto de Ciudad Real"
+                                        href="https://www.aeropuertos.net/aeropuerto-central-de-ciudad-real/">Aeropuerto
+                                        de Ciudad
+                                        Real</a> (183 km)<br />
+                                    <a title="Aeropuerto de Burgos"
+                                        href="https://www.aeropuertos.net/aeropuerto-de-burgos/">Aeropuerto
+                                        de Burgos</a> (209 km)<br />
+                                    <a title="Aeropuerto de Albacete"
+                                        href="https://www.aeropuertos.net/aeropuerto-de-albacete/">Aeropuerto de
+                                        Albacete</a> (223 km)
+                                </p>
+                                <h2 class="icon"><span id="Aerolineas_y_destinos">
+                                        <div class="icono avion"></div>
+                                        <div class="text_w_icon">Aerolíneas y destinos</div>
+                                    </span></h2>
+        
+                                <table id="tablepress-MAD w-full" class="tablepress tablepress-id-MAD">
+                                    <thead>
+                                        <tr class="row-1 odd">
+                                            <th class="column-1">Aerolínea</th>
+                                            <th class="column-2">Destino</th>
+                                            <th class="column-3">Terminal</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="row-hover">
+                                        <tr class="row-2 even">
+                                            <td class="column-1">Aegean Airlines</td>
+                                            <td class="column-2">Atenas</td>
+                                            <td class="column-3">2</td>
+                                        </tr>
+                                        <tr class="row-3 odd">
+                                            <td class="column-1">Aer Lingus</td>
+                                            <td class="column-2">Dublín</td>
+                                            <td class="column-3">1</td>
+                                        </tr>
+                                        <tr class="row-4 even">
+                                            <td class="column-1">Aeroflot</td>
+                                            <td class="column-2">Moscú-Sheremetyevo</td>
+                                            <td class="column-3">1</td>
+                                        </tr>
+                                        <tr class="row-5 odd">
+                                            <td class="column-1"><a title="Aerolíneas Argentinas"
+                                                    href="https://www.aeropuertos.net/aerolineas-argentinas/">Aerolíneas
+                                                    Argentinas</a>
+                                            </td>
+                                            <td class="column-2">Buenos Aires-Ministro Pistarini</td>
+                                            <td class="column-3">1</td>
+                                        </tr>
+                                        <tr class="row-6 even">
+                                            <td class="column-1">Aeroméxico</td>
+                                            <td class="column-2"><a title="Aeropuerto de la Ciudad de México (MEX)"
+                                                    href="https://www.aeropuertos.net/aeropuerto-internacional-de-la-ciudad-de-mexico/">Ciudad
+                                                    de México</a></td>
+                                            <td class="column-3">1</td>
+                                        </tr>
+                                        <tr class="row-7 odd">
+                                            <td class="column-1">Air Canada</td>
+                                            <td class="column-2">Toronto-Pearson</td>
+                                            <td class="column-3">1</td>
+                                        </tr>
+                                        <tr class="row-8 even">
+                                            <td class="column-1">Air China</td>
+                                            <td class="column-2">Pekín-Capital, San Pablo-Guarulhos</td>
+                                            <td class="column-3">1</td>
+                                        </tr>
+                                        <tr class="row-9 odd">
+                                            <td class="column-1">Air Europa</td>
+                                            <td class="column-2">Banjul, Buenos Aires-Ezeiza, Cancún, Caracas,
+                                                Dakar, Havana, Lima,
+                                                London-Gatwick, Montevideo (begins June 2013), Oujda, Puerto Plata,
+                                                Punta Cana, Salvador
+                                                da Bahia, Santa Cruz de la Sierra, Santo Domingo<br />
+                                                Estacional: New York-JFK</td>
+                                            <td class="column-3">1</td>
+                                        </tr>
+                                        <tr class="row-10 even">
+                                            <td class="column-1">Air Europa</td>
+                                            <td class="column-2">Amsterdam, Lanzarote, Barcelona, Brussels,
+                                                Fuerteventura, Geneva (ends
+                                                1 April 2013), Ibiza, Las Palmas de Gran Canaria, Milan-Malpensa,
+                                                Menorca, Palma de
+                                                Mallorca, Paris-Orly, Rome-Fiumicino, Tenerife-North,
+                                                Tenerife-South, Vigo</td>
+                                            <td class="column-3">2</td>
+                                        </tr>
+                                        <tr class="row-11 odd">
+                                            <td class="column-1">Air Transat</td>
+                                            <td class="column-2">Seasonal: Montréal-Trudeau, Toronto-Pearson</td>
+                                            <td class="column-3">1</td>
+                                        </tr>
+                                        <tr class="row-12 even">
+                                            <td class="column-1">Blue Air</td>
+                                            <td class="column-2">Bucharest</td>
+                                            <td class="column-3">1</td>
+                                        </tr>
+                                        <tr class="row-13 odd">
+                                            <td class="column-1">Boliviana de Aviación</td>
+                                            <td class="column-2">Santa Cruz de la Sierra</td>
+                                            <td class="column-3">1</td>
+                                        </tr>
+                                        <tr class="row-14 even">
+                                            <td class="column-1">Conviasa<br />
+                                                operado por SBA Airlines</td>
+                                            <td class="column-2">Caracas</td>
+                                            <td class="column-3">1</td>
+                                        </tr>
+                                        <tr class="row-15 odd">
+                                            <td class="column-1">Cubana de Aviación</td>
+                                            <td class="column-2">Havana, Santiago de Cuba</td>
+                                            <td class="column-3">1</td>
+                                        </tr>
+                                        <tr class="row-16 even">
+                                            <td class="column-1">Delta Air Lines</td>
+                                            <td class="column-2">Atlanta, New York-JFK</td>
+                                            <td class="column-3">1</td>
+                                        </tr>
+                                        <tr class="row-17 odd">
+                                            <td class="column-1">EasyJet</td>
+                                            <td class="column-2">Berlin-Schönefeld, Bristol, Edinburgh, Lisbon,
+                                                Liverpool,
+                                                London-Gatwick, London-Luton, Lyon, Milan-Malpensa, Paris-Charles de
+                                                Gaulle,
+                                                Rome-Fiumicino (ends 7 April 2013), Toulouse</td>
+                                            <td class="column-3">1</td>
+                                        </tr>
+                                        <tr class="row-18 even">
+                                            <td class="column-1">EasyJet Switzerland</td>
+                                            <td class="column-2">Geneva, Basel/Mulhouse</td>
+                                            <td class="column-3">1</td>
+                                        </tr>
+                                        <tr class="row-19 odd">
+                                            <td class="column-1">EgyptAir</td>
+                                            <td class="column-2">Cairo</td>
+                                            <td class="column-3">1</td>
+                                        </tr>
+                                        <tr class="row-20 even">
+                                            <td class="column-1">Korean Air</td>
+                                            <td class="column-2">Seoul-Incheon</td>
+                                            <td class="column-3">1</td>
+                                        </tr>
+                                        <tr class="row-21 odd">
+                                            <td class="column-1">Orbest Orizonia Airlines</td>
+                                            <td class="column-2">Cancún, Punta Cana<br />
+                                                Seasonal: Budapest, Edinburgh, Menorca, Prague</td>
+                                            <td class="column-3">1</td>
+                                        </tr>
+                                        <tr class="row-22 even">
+                                            <td class="column-1">Ryanair</td>
+                                            <td class="column-2">Alghero, Asturias, Beauvais, Bergamo, Bilbao,
+                                                Bologna, Budapest,
+                                                Charleroi, Dublin, Ibiza, Kraków, Lanzarote, Las Palmas de Gran
+                                                Canaria,
+                                                London-Stansted, Malta, Manchester, Marrakech, Marseille, Menorca,
+                                                Palermo, Palma de
+                                                Mallorca, Pisa, Porto, Rome-Ciampino, Santander, Santiago de
+                                                Compostela,
+                                                Stockholm-Skavsta (ends 30 March 2013), Tangier, Tenerife-South,
+                                                Turin (ends 30 March
+                                                2013)</td>
+                                            <td class="column-3">1</td>
+                                        </tr>
+                                        <tr class="row-23 odd">
+                                            <td class="column-1">Saudia</td>
+                                            <td class="column-2">Jeddah, Riyadh</td>
+                                            <td class="column-3">1</td>
+                                        </tr>
+                                        <tr class="row-24 even">
+                                            <td class="column-1">TAM Airlines</td>
+                                            <td class="column-2">São Paulo-Guarulhos</td>
+                                            <td class="column-3">1</td>
+                                        </tr>
+                                        <tr class="row-25 odd">
+                                            <td class="column-1">Thai Airways International</td>
+                                            <td class="column-2">Bangkok-Suvarnabhumi</td>
+                                            <td class="column-3">1</td>
+                                        </tr>
+                                        <tr class="row-26 even">
+                                            <td class="column-1">Transaero</td>
+                                            <td class="column-2">Moscow-Domodedovo</td>
+                                            <td class="column-3">1</td>
+                                        </tr>
+                                        <tr class="row-27 odd">
+                                            <td class="column-1">Tunisair</td>
+                                            <td class="column-2">Tunis</td>
+                                            <td class="column-3">1</td>
+                                        </tr>
+                                        <tr class="row-28 even">
+                                            <td class="column-1">Turkish Airlines</td>
+                                            <td class="column-2">Istanbul-Atatürk</td>
+                                            <td class="column-3">1</td>
+                                        </tr>
+                                        <tr class="row-29 odd">
+                                            <td class="column-1">United Airlines</td>
+                                            <td class="column-2">Newark</td>
+                                            <td class="column-3">1</td>
+                                        </tr>
+                                        <tr class="row-30 even">
+                                            <td class="column-1">US Airways</td>
+                                            <td class="column-2">Philadelphia<br />
+                                                Seasonal: Charlotte</td>
+                                            <td class="column-3">1</td>
+                                        </tr>
+                                        <tr class="row-31 odd">
+                                            <td class="column-1">Wizz Air</td>
+                                            <td class="column-2">Budapest, Bucharest, Cluj-Napoca, Katowice, Prague,
+                                                Sofia, Târgu Mureș,
+                                                Timişoara, Warsaw Modlin</td>
+                                            <td class="column-3">1</td>
+                                        </tr>
+                                        <tr class="row-32 even">
+                                            <td class="column-1">Aegean Airlines</td>
+                                            <td class="column-2">Athens</td>
+                                            <td class="column-3">2</td>
+                                        </tr>
+                                        <tr class="row-33 odd">
+                                            <td class="column-1">Air Europa<br />
+                                                operated by Privilege Style </td>
+                                            <td class="column-2">Lisbon, Valencia</td>
+                                            <td class="column-3">2</td>
+                                        </tr>
+                                        <tr class="row-34 even">
+                                            <td class="column-1">Air Europa<br />
+                                                operated by Swiftair</td>
+                                            <td class="column-2">Bilbao, Valencia</td>
+                                            <td class="column-3">2</td>
+                                        </tr>
+                                        <tr class="row-35 odd">
+                                            <td class="column-1">Air France</td>
+                                            <td class="column-2">Paris-Charles de Gaulle</td>
+                                            <td class="column-3">2</td>
+                                        </tr>
+                                        <tr class="row-36 even">
+                                            <td class="column-1">Alitalia</td>
+                                            <td class="column-2">Rome-Fiumicino</td>
+                                            <td class="column-3">2</td>
+                                        </tr>
+                                        <tr class="row-37 odd">
+                                            <td class="column-1">Alitalia<br />
+                                                operated by Alitalia CityLiner</td>
+                                            <td class="column-2">Milan-Linate (ends 30 March 2013)</td>
+                                            <td class="column-3">2</td>
+                                        </tr>
+                                        <tr class="row-38 even">
+                                            <td class="column-1">Brussels Airlines</td>
+                                            <td class="column-2">Brussels</td>
+                                            <td class="column-3">2</td>
+                                        </tr>
+                                        <tr class="row-39 odd">
+                                            <td class="column-1">KLM</td>
+                                            <td class="column-2">Amsterdam</td>
+                                            <td class="column-3">2</td>
+                                        </tr>
+                                        <tr class="row-40 even">
+                                            <td class="column-1">LOT Polish Airlines</td>
+                                            <td class="column-2">Warsaw-Chopin</td>
+                                            <td class="column-3">2</td>
+                                        </tr>
+                                        <tr class="row-41 odd">
+                                            <td class="column-1">Lufthansa</td>
+                                            <td class="column-2">Frankfurt, Hamburg, Munich</td>
+                                            <td class="column-3">2</td>
+                                        </tr>
+                                        <tr class="row-42 even">
+                                            <td class="column-1">Lufthansa Regional<br />
+                                                operated by Lufthansa CityLine</td>
+                                            <td class="column-2">Düsseldorf, Hamburg, Munich</td>
+                                            <td class="column-3">2</td>
+                                        </tr>
+                                        <tr class="row-43 odd">
+                                            <td class="column-1">Scandinavian Airlines</td>
+                                            <td class="column-2">Copenhagen</td>
+                                            <td class="column-3">2</td>
+                                        </tr>
+                                        <tr class="row-44 even">
+                                            <td class="column-1">Swiss International Air Lines</td>
+                                            <td class="column-2">Geneva, Zürich</td>
+                                            <td class="column-3">2</td>
+                                        </tr>
+                                        <tr class="row-45 odd">
+                                            <td class="column-1">TAP Portugal</td>
+                                            <td class="column-2">Funchal, Lisbon</td>
+                                            <td class="column-3">2</td>
+                                        </tr>
+                                        <tr class="row-46 even">
+                                            <td class="column-1">TAP<br />
+                                                operated by Portugalia Airlines</td>
+                                            <td class="column-2">Lisbon, Porto</td>
+                                            <td class="column-3">2</td>
+                                        </tr>
+                                        <tr class="row-47 odd">
+                                            <td class="column-1">Transavia.com</td>
+                                            <td class="column-2">Eindhoven (begins 2 April 2013)</td>
+                                            <td class="column-3">2</td>
+                                        </tr>
+                                        <tr class="row-48 even">
+                                            <td class="column-1">Air Algérie</td>
+                                            <td class="column-2">Algiers</td>
+                                            <td class="column-3">4</td>
+                                        </tr>
+                                        <tr class="row-49 odd">
+                                            <td class="column-1">Air Berlin</td>
+                                            <td class="column-2">Berlin-Tegel (begins 25 February 2013), Palma de
+                                                Mallorca</td>
+                                            <td class="column-3">4</td>
+                                        </tr>
+                                        <tr class="row-50 even">
+                                            <td class="column-1">American Airlines</td>
+                                            <td class="column-2">Dallas/Fort Worth, Miami, New York-JFK</td>
+                                            <td class="column-3">4</td>
+                                        </tr>
+                                        <tr class="row-51 odd">
+                                            <td class="column-1">Avianca</td>
+                                            <td class="column-2">Bogotá, Cali, Medellín</td>
+                                            <td class="column-3">4</td>
+                                        </tr>
+                                        <tr class="row-52 even">
+                                            <td class="column-1">British Airways</td>
+                                            <td class="column-2">London-Heathrow</td>
+                                            <td class="column-3">4</td>
+                                        </tr>
+                                        <tr class="row-53 odd">
+                                            <td class="column-1">British Airways<br />
+                                                operated by BA CityFlyer</td>
+                                            <td class="column-2">London-City</td>
+                                            <td class="column-3">4</td>
+                                        </tr>
+                                        <tr class="row-54 even">
+                                            <td class="column-1">Bulgaria Air</td>
+                                            <td class="column-2">Sofia</td>
+                                            <td class="column-3">4</td>
+                                        </tr>
+                                        <tr class="row-55 odd">
+                                            <td class="column-1">Ceiba Intercontinental Airlines</td>
+                                            <td class="column-2">Malabo</td>
+                                            <td class="column-3">4</td>
+                                        </tr>
+                                        <tr class="row-56 even">
+                                            <td class="column-1">Czech Airlines</td>
+                                            <td class="column-2">Prague</td>
+                                            <td class="column-3">4</td>
+                                        </tr>
+                                        <tr class="row-57 odd">
+                                            <td class="column-1">El Al</td>
+                                            <td class="column-2">Tel Aviv-Ben Gurion</td>
+                                            <td class="column-3">4</td>
+                                        </tr>
+                                        <tr class="row-58 even">
+                                            <td class="column-1">Emirates</td>
+                                            <td class="column-2">Dubai</td>
+                                            <td class="column-3">4</td>
+                                        </tr>
+                                        <tr class="row-59 odd">
+                                            <td class="column-1">Finnair</td>
+                                            <td class="column-2">Helsinki</td>
+                                            <td class="column-3">4</td>
+                                        </tr>
+                                        <tr class="row-60 even">
+                                            <td class="column-1">Iberia</td>
+                                            <td class="column-2">A Coruña, Accra, Algiers, Amsterdam, Asturias,
+                                                Barcelona, Bilbao,
+                                                Bogotá, Boston, Brussels, Buenos Aires-Ezeiza, Caracas, Casablanca,
+                                                Chicago-O'Hare,
+                                                Dakar, Dubrovnik, Geneva, Guatemala City, Las Palmas de Gran
+                                                Canaria, Guayaquil, Havana
+                                                (ends 30 March 2013), Lagos, Lima, Lisbon, London-Heathrow, Los
+                                                Angeles, Luanda, Malabo,
+                                                Mexico City, Miami, Milan-Linate, Milan-Malpensa, Montevideo (ends
+                                                30 March 2013),
+                                                Moscow-Domodedovo, Munich, New York-JFK, Nouakchott, Oran, Panama
+                                                City, Paris-Orly,
+                                                Prague, Quito, Rio de Janeiro-Galeão, Rome-Fiumicino, San José de
+                                                Costa Rica, San Juan
+                                                de Puerto Rico (ends 30 March 2013), San Salvador, Santa Cruz de la
+                                                Palma, Santiago de
+                                                Chile, Santiago de Compostela, Santo Domingo (ends 30 March 2013),
+                                                São Paulo-Guarulhos,
+                                                Tel Aviv-Ben Gurion, Tenerife-North, Tenerife South, Venice-Marco
+                                                Polo, Vienna</td>
+                                            <td class="column-3">4</td>
+                                        </tr>
+                                        <tr class="row-61 odd">
+                                            <td class="column-1">Iberia Regional<br />
+                                                operated by Air Nostrum</td>
+                                            <td class="column-2">A Coruña, Almería, Bologna, Bordeaux,
+                                                Clermont/Ferrand, Düsseldorf,
+                                                Granada, Ibiza, León, Logroño, Lyon, Marseille, Marrakech, Melilla,
+                                                Menorca,
+                                                Milan-Malpensa, Munich, Murcia, Nantes, Nice, Palma de Mallorca,
+                                                Paris-Orly, Pamplona,
+                                                Porto, Rabat, San Sebastián, Santander, Santiago de Compostela,
+                                                Strasbourg, Tangier,
+                                                Toulouse, Turin, Valencia, Zurich<br />
+                                                Seasonal: Asturias, Catania, Corfu, Frankfurt, Geneva, Heraklion, La
+                                                Palma, Lanzarote,
+                                                Lisbon, Malta, Olbia, Palermo, Santorini, Split, Venice, Vienna</td>
+                                            <td class="column-3">4</td>
+                                        </tr>
+                                        <tr class="row-62 even">
+                                            <td class="column-1">Iberia Express</td>
+                                            <td class="column-2">Alicante Airport, Copenhagen, Dublin, Düsseldorf,
+                                                Frankfurt,
+                                                Fuerteventura, Jerez de la Frontera, Lanzarote, La Palma, Málaga,
+                                                Palma de Mallorca,
+                                                Seville, Stockholm-Arlanda, Vigo<br />
+                                                Seasonal: Mykonos, Granada, Ibiza, Menorca, Naples, Santiago de
+                                                Compostela</td>
+                                            <td class="column-3">4</td>
+                                        </tr>
+                                        <tr class="row-63 odd">
+                                            <td class="column-1">LAN Airlines</td>
+                                            <td class="column-2">Frankfurt, Santiago de Chile</td>
+                                            <td class="column-3">4</td>
+                                        </tr>
+                                        <tr class="row-64 even">
+                                            <td class="column-1">LAN Ecuador</td>
+                                            <td class="column-2">Guayaquil</td>
+                                            <td class="column-3">4</td>
+                                        </tr>
+                                        <tr class="row-65 odd">
+                                            <td class="column-1">LAN Perú</td>
+                                            <td class="column-2">Lima</td>
+                                            <td class="column-3">4</td>
+                                        </tr>
+                                        <tr class="row-66 even">
+                                            <td class="column-1">Luxair</td>
+                                            <td class="column-2">Luxembourg</td>
+                                            <td class="column-3">4</td>
+                                        </tr>
+                                        <tr class="row-67 odd">
+                                            <td class="column-1">Pullmantur Air</td>
+                                            <td class="column-2">Charter: Aruba, Athens, Bologna, Bogotá, Cancún,
+                                                Helsinki, Malmö, Punta
+                                                Cana, Santa Cruz de la Sierra, Santo Domingo, Tallinn,
+                                                Trondheim<br />
+                                                Seasonal charter: Miami</td>
+                                            <td class="column-3">4</td>
+                                        </tr>
+                                        <tr class="row-68 even">
+                                            <td class="column-1">Qatar Airways</td>
+                                            <td class="column-2">Doha</td>
+                                            <td class="column-3">4</td>
+                                        </tr>
+                                        <tr class="row-69 odd">
+                                            <td class="column-1">Royal Air Maroc</td>
+                                            <td class="column-2">Casablanca</td>
+                                            <td class="column-3">4</td>
+                                        </tr>
+                                        <tr class="row-70 even">
+                                            <td class="column-1">Royal Jordanian</td>
+                                            <td class="column-2">Amman</td>
+                                            <td class="column-3">4</td>
+                                        </tr>
+                                        <tr class="row-71 odd">
+                                            <td class="column-1">S7 Airlines</td>
+                                            <td class="column-2">Moscow-Domodedovo</td>
+                                            <td class="column-3">4</td>
+                                        </tr>
+                                        <tr class="row-72 even">
+                                            <td class="column-1">TAROM</td>
+                                            <td class="column-2">Bucharest</td>
+                                            <td class="column-3">4</td>
+                                        </tr>
+                                        <tr class="row-73 odd">
+                                            <td class="column-1">Ukraine International Airlines</td>
+                                            <td class="column-2">Kiev-Boryspil</td>
+                                            <td class="column-3">4</td>
+                                        </tr>
+                                        <tr class="row-74 even">
+                                            <td class="column-1">Uzbekistan Airways</td>
+                                            <td class="column-2">Tashkent</td>
+                                            <td class="column-3">4</td>
+                                        </tr>
+                                        <tr class="row-75 odd">
+                                            <td class="column-1">Vueling</td>
+                                            <td class="column-2">Barcelona, Florence, Paris-Charles de Gaulle<br />
+                                                Seasonal: Ibiza, Malta, Menorca</td>
+                                            <td class="column-3">4</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+				</div>
+			</main>
+			<section class="airport-sections w-full">
+				<div class="arrow-section-container absolute flex items-center">
+					<svg
+						class="arrow-section"
+						xmlns="http://www.w3.org/2000/svg"
+						width="24"
+						height="24"
+						viewBox="0 0 24 24"
+					>
+						<path
+							d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"
+						/>
+					</svg>
+				</div>
+				<div class="airport-section-content">
+					<div class="airport-section flex flex-col items-center justify-center">
+						<div class="circle-sections flex items-center justify-center">
+							<a href="">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="24"
+									height="24"
+									viewBox="0 0 24 24"
+								>
+									<path
+										d="M3.414 13.778 2 15.192l4.949 2.121 2.122 4.95 1.414-1.414-.707-3.536L13.091 14l3.61 7.704 1.339-1.339-1.19-10.123 2.828-2.829a2 2 0 1 0-2.828-2.828l-2.903 2.903L3.824 6.297 2.559 7.563l7.644 3.67-3.253 3.253-3.536-.708z"
+									/>
+								</svg>
+							</a>
+						</div>
+						<p>Vuelos</p>
+					</div>
+					<div class="airport-section flex flex-col items-center justify-center">
+						<div class="circle-sections flex items-center justify-center">
+							<a href="">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="24"
+									height="24"
+									viewBox="0 0 24 24"
+								>
+									<path
+										d="M21 4H3a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1zm-1 11a3 3 0 0 0-3 3H7a3 3 0 0 0-3-3V9a3 3 0 0 0 3-3h10a3 3 0 0 0 3 3v6z"
+									/>
+									<path
+										d="M12 8c-2.206 0-4 1.794-4 4s1.794 4 4 4 4-1.794 4-4-1.794-4-4-4zm0 6c-1.103 0-2-.897-2-2s.897-2 2-2 2 .897 2 2-.897 2-2 2z"
+									/>
+								</svg>
+							</a>
+						</div>
+						<p>Divisas</p>
+					</div>
+					<div class="airport-section flex flex-col items-center justify-center">
+						<div class="circle-sections flex items-center justify-center">
+							<a href="">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="24"
+									height="24"
+									viewBox="0 0 24 24"
+								>
+									<path
+										d="M16.375 2H7.621c-.224 0-1.399.065-2.503 1.351C4.031 4.616 4 5.862 4 6v11a2 2 0 0 0 2 2h1l-2 3h2.353l.667-1h8l.677 1H19l-2-3h1a2 2 0 0 0 2-2V6c.001-.188-.032-1.434-1.129-2.665C17.715 2.037 16.509 2 16.375 2zM10 4h4v2h-4V4zM7.5 17a1.5 1.5 0 1 1 .001-3.001A1.5 1.5 0 0 1 7.5 17zm9 0a1.5 1.5 0 1 1 .001-3.001A1.5 1.5 0 0 1 16.5 17zm1.5-5H6V8h12v4z"
+									/>
+								</svg>
+							</a>
+						</div>
+						<p>Transporte</p>
+					</div>
+					<div class="airport-section flex flex-col items-center justify-center">
+						<div class="circle-sections flex items-center justify-center">
+							<a href="">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="24"
+									height="24"
+									viewBox="0 0 24 24"
+								>
+									<circle cx="8" cy="11" r="3" />
+									<path
+										d="M18.205 7H12v8H4V6H2v14h2v-3h16v3h2v-4c0-.009-.005-.016-.005-.024H22V11c0-2.096-1.698-4-3.795-4z"
+									/>
+								</svg>
+							</a>
+						</div>
+						<p>Hoteles</p>
+					</div>
+					<div class="airport-section flex flex-col items-center justify-center">
+						<div class="circle-sections flex items-center justify-center">
+							<a href="">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="24"
+									height="24"
+									viewBox="0 0 24 24"
+								>
+									<path
+										d="M3.414 13.778 2 15.192l4.949 2.121 2.122 4.95 1.414-1.414-.707-3.536L13.091 14l3.61 7.704 1.339-1.339-1.19-10.123 2.828-2.829a2 2 0 1 0-2.828-2.828l-2.903 2.903L3.824 6.297 2.559 7.563l7.644 3.67-3.253 3.253-3.536-.708z"
+									/>
+								</svg>
+							</a>
+						</div>
+						<p>Vuelos</p>
+					</div>
+					<div class="airport-section flex flex-col items-center justify-center">
+						<div class="circle-sections flex items-center justify-center">
+							<a href="">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="24"
+									height="24"
+									viewBox="0 0 24 24"
+								>
+									<path
+										d="M21 4H3a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1zm-1 11a3 3 0 0 0-3 3H7a3 3 0 0 0-3-3V9a3 3 0 0 0 3-3h10a3 3 0 0 0 3 3v6z"
+									/>
+									<path
+										d="M12 8c-2.206 0-4 1.794-4 4s1.794 4 4 4 4-1.794 4-4-1.794-4-4-4zm0 6c-1.103 0-2-.897-2-2s.897-2 2-2 2 .897 2 2-.897 2-2 2z"
+									/>
+								</svg>
+							</a>
+						</div>
+						<p>Divisas</p>
+					</div>
+					<div class="airport-section flex flex-col items-center justify-center">
+						<div class="circle-sections flex items-center justify-center">
+							<a href="">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="24"
+									height="24"
+									viewBox="0 0 24 24"
+								>
+									<path
+										d="M16.375 2H7.621c-.224 0-1.399.065-2.503 1.351C4.031 4.616 4 5.862 4 6v11a2 2 0 0 0 2 2h1l-2 3h2.353l.667-1h8l.677 1H19l-2-3h1a2 2 0 0 0 2-2V6c.001-.188-.032-1.434-1.129-2.665C17.715 2.037 16.509 2 16.375 2zM10 4h4v2h-4V4zM7.5 17a1.5 1.5 0 1 1 .001-3.001A1.5 1.5 0 0 1 7.5 17zm9 0a1.5 1.5 0 1 1 .001-3.001A1.5 1.5 0 0 1 16.5 17zm1.5-5H6V8h12v4z"
+									/>
+								</svg>
+							</a>
+						</div>
+						<p>Transporte</p>
+					</div>
+					<div class="airport-section flex flex-col items-center justify-center">
+						<div class="circle-sections flex items-center justify-center">
+							<a href="">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="24"
+									height="24"
+									viewBox="0 0 24 24"
+								>
+									<circle cx="8" cy="11" r="3" />
+									<path
+										d="M18.205 7H12v8H4V6H2v14h2v-3h16v3h2v-4c0-.009-.005-.016-.005-.024H22V11c0-2.096-1.698-4-3.795-4z"
+									/>
+								</svg>
+							</a>
+						</div>
+						<p>Hoteles</p>
+					</div>
+				</div>
+			</section>
+		</div>
+		
+		<script src="build/js/bundle.min.js"></script>
+		<script src="build/jquery/bundle_jquery.min.js"></script>
+		<script src="build/js/clock.js"></script>
+	</body>
+</html>

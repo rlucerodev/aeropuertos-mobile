@@ -1,0 +1,28 @@
+#accordion-menu, #accordion-menu-content {
+   .ui-state-active {
+      background: $color-secondary;
+      border: 1px solid $color-gray-lines;
+   }
+   .ui-accordion .ui-accordion-header {
+      margin: 0;
+   }
+}
+
+#accordion-menu {
+   .ui-accordion-content {
+      padding: 0;
+   }
+
+   
+}
+
+#accordion-menu-content {
+   .ui-icon-caret-1-s, .ui-icon-caret-1-n {
+		font-size:1rem;
+		position: absolute;
+		right: 1rem;
+	}
+   .ui-accordion .ui-accordion-header {
+      margin: 0;
+   }
+}
