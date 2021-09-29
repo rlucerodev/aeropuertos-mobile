@@ -89,7 +89,7 @@
 
 	.banderas-paises,
 	.aerolineas-paises {
-		height: 90px;
+		height: 100px;
 		padding: 0.5rem;
 		ul {
 			overflow-x: scroll;
@@ -124,7 +124,6 @@
 			}
 		}
 	}
-
 	.btn-paises,
 	.btn-aerolineas {
 		font-size: 12px;
@@ -133,11 +132,13 @@
 		padding: 0.5rem;
 		border: 1px solid gray;
 		background-color: rgb(228, 228, 228);
+		border-radius: 5px;
 	}
+
 }
 
 .section-acerca {
-	margin: .5rem;
+	margin: 2rem;
 	.title-section-acerca {
 		text-align: center;
 	}
