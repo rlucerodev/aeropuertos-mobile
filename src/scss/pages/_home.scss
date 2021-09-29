@@ -70,10 +70,6 @@
 #homeMap {
 	height: 350px;
 	width: 100%;
-	background-color: gray;
-	background: url('/build/img/RouteMapper.webp');
-	background-repeat: no-repeat;
-	background-size: cover;
 }
 
 #accordion-menu-content {
@@ -89,7 +85,7 @@
 
 	.banderas-paises,
 	.aerolineas-paises {
-		height: 100px;
+		height: 160px;
 		padding: 0.5rem;
 		ul {
 			overflow-x: scroll;
@@ -120,6 +116,7 @@
 					height: 100%;
 					font-size: 11px;
 					text-transform: uppercase;
+					padding: .25rem 0;
 				}
 			}
 		}
@@ -128,13 +125,16 @@
 	.btn-aerolineas {
 		font-size: 12px;
 		display: block;
-		margin: 0.5rem auto;
-		padding: 0.5rem;
+		margin: 1rem auto 0 auto;
+		padding: .5rem 3rem;
 		border: 1px solid gray;
-		background-color: rgb(228, 228, 228);
+		background-color: aliceblue;
 		border-radius: 5px;
 	}
 
+	.btn-paises:active, .btn-aerolineas:active {
+		background-color: darken($color-primary, 10%);
+	}
 }
 
 .section-acerca {

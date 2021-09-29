@@ -952,19 +952,27 @@
 			</form>
 		</div>
 		<div class="main-container">
-			<ul class="scroll-continentes">
+			<ul class="scroll-continentes" id="scroll-continentes">
 				<strong class="scroll-continentes__title">Continentes</strong>
-				<li class="scroll-continent">Europa</li>
-				<li class="scroll-continent">Sudamérica</li>
-				<li class="scroll-continent">Centroamérica</li>
-				<li class="scroll-continent">Norteamérica</li>
-				<li class="scroll-continent">Asia</li>
-				<li class="scroll-continent">África</li>
-				<li class="scroll-continent">Oceanía</li>
-				<li class="scroll-continent">El Caribe</li>
+				<li class="scroll-continent" id="scroll-europa">Europa</li>
+				<li class="scroll-continent" id="scroll-sudamerica">Sudamérica</li>
+				<li class="scroll-continent" id="scroll-centroamerica">Centroamérica</li>
+				<li class="scroll-continent" id="scroll-norteamerica">Norteamérica</li>
+				<li class="scroll-continent" id="scroll-asia">Asia</li>
+				<li class="scroll-continent" id="scroll-africa">África</li>
+				<li class="scroll-continent" id="scroll-oceania">Oceanía</li>
+				<li class="scroll-continent" id="scroll-caribe">El Caribe</li>
 			</ul>
-			<div id="homeMap">
-			</div>
+			<iframe
+				id="homeMap"
+				width="100%"
+				height="450"
+				style="border:0"
+				loading="lazy"
+				allowfullscreen
+				src="https://www.google.com/maps/embed/v1/search?q=zoom:0&key=AIzaSyAWMWZNZ8MpkhD1qGREkRwR-IbuA17VzzE">
+			</iframe>
+
 			<div id="accordion-menu-content" class="ui-accordion ui-widget ui-helper-reset" role="tablist">
 				<h3
 					class="
@@ -1027,8 +1035,10 @@
 								<p>Peru</p>
 							</a>
 						</li>
-						<button href="#" class="btn-paises">Ver más</button>
 					</ul>
+					<a href="">
+						<button href="#" class="btn-paises">Ver más</button>
+					</a>
 				</div>
 				<h3
 					class="
@@ -1091,8 +1101,10 @@
 								<p href="#">LatamAirlines</p>
 							</a>
 						</li>
-						<button href="#" class="btn-aerolineas">Ver más</button>
 					</ul>
+					<a href="">
+						<button class="btn-aerolineas">Ver más</button>
+					</a>
 				</div>
 			</div>
 		</div>
