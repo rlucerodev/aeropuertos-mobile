@@ -55,6 +55,10 @@
 		justify-content: center;
 	}
 
+	.scroll-continentes__title {
+		padding: 0 .25rem;
+	}
+
 	.scroll-continent {
 		background-color: $color-gray-light;
 		border-radius: 5px;
@@ -62,8 +66,21 @@
 		height: 25px;
 	}
 
-	.scroll-continent-active {
-		background-color: darken($color-gray-light, 10%);
+	.scroll-continent:active {
+		background-color: $color-secondary;
+		color:white;
+	}
+
+	.sc-active {
+		background-color: $color-secondary;
+		color: white
+	}
+
+	.scroll-continentes__title.sc-active {
+		background-color: $color-primary;
+		color: $font-color;
+		outline: 1px solid $font-color;
+		border-radius: 5px;
 	}
 }
 

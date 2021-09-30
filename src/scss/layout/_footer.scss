@@ -3,19 +3,16 @@
    color: $color-gray-lines;
    font-size: 12px;
 
-   .footer__top, .footer__bottom {
-      padding: 1.5rem;
-   }
-
    .footer__top {
       display: flex;
+      padding: 1.5rem;
       flex-direction: column;
       gap: 1.5rem;
    }
 
    .footer__bottom {
-      background-color: rgb(221, 221, 221);
-      
+      background-color: $color-primary;
+      padding: 1rem;
       .footer__textwidget {
          text-align: center;
       }
